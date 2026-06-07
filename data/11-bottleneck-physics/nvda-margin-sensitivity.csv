@@ -1,0 +1,45 @@
+# NVDA 毛利率敏感度矩阵推导
+# 关联章节：book/11-bottleneck-physics/README.md §11.7
+# 数据时点：2026-05
+# 作者自建模型；非预测；commentary-only
+
+# === 基线输入参数 ===
+key,value,unit,source
+gb200_bom_total,13500,USD,Silicon Analysts AI Chip Costs 2026-04 + ch01 §1.2 + ch06 §1
+gb200_asp_midpoint,75000,USD,SemiAnalysis + 卖方 BOM 报告，业内估算 $65K-90K 区间中值
+hbm_stack_count,16,stack,NVDA Blackwell whitepaper 2024-03（双 B200 × 8 stack）
+hbm_baseline_price,300,USD/stack,Silicon Analysts HBM Pricing 2026-04 + TrendForce 2025-12-24
+hbm_bom_share,5800,USD,16 stack × $300 = $4800 + Grace HBM 1-2 stack ≈ $1000
+cowos_bom_share,2200,USD,Silicon Analysts 2026-04
+cowos_price_discount_per_10pp_dropoff,5,percent,业内估算 5-10% 区间中值（每 10pp 利用率下降给约 5% 让利）
+resiliency_transmission_coefficient,0.7,ratio,反身性传导系数：BOM 节省被 NVDA 吸收为毛利的比例
+baseline_bom_margin,82.0,percent,(75000 − 13500) / 75000
+
+# === 单格算式 ===
+# BOM 节省 = (HBM_baseline − HBM_new) × 16 stack + 2200 × CoWoS_discount
+# 毛利率提升 pp = (BOM 节省 / ASP) × 70%
+# 新 BOM 毛利率 = 82.0% + 提升 pp
+
+# === 9 交叉点 ===
+hbm_price_usd,cowos_utilization_pct,hbm_savings_usd,cowos_discount_pct,cowos_savings_usd,total_bom_savings_usd,savings_over_asp_pct,margin_uplift_pp,new_bom_margin_pct
+300,100,0,0,0,0,0.000,0.0,82.0
+300,90,0,5,110,110,0.147,0.1,82.1
+300,80,0,10,220,220,0.293,0.2,82.2
+250,100,800,0,0,800,1.067,0.7,82.7
+250,90,800,5,110,910,1.213,0.8,82.8
+250,80,800,10,220,1020,1.360,1.0,83.0
+200,100,1600,0,0,1600,2.133,1.5,83.5
+200,90,1600,5,110,1710,2.280,1.6,83.6
+200,80,1600,10,220,1820,2.427,1.7,83.7
+
+# === 反身性系数敏感性边界（50% / 70% / 85%）===
+# 同一 BOM 节省，不同传导系数下的毛利率提升 pp
+hbm_price_usd,cowos_utilization_pct,total_bom_savings_usd,uplift_at_50pct,uplift_at_70pct,uplift_at_85pct
+250,90,910,0.6,0.8,1.0
+200,80,1820,1.2,1.7,2.1
+
+# === 公司层翻译（70-85% 折扣区间）===
+# 公司层 gross margin 变化 = BOM 层 pp × 0.70~0.85
+bom_uplift_pp,company_uplift_low_70pct,company_uplift_high_85pct
+0.8,0.56,0.68
+1.7,1.19,1.45
