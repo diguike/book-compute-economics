@@ -27,6 +27,11 @@
 - **系统学习**：按目录顺序，8 个部分各成体系
 - **只关心估值**：直接看第 7 部（第 29-31 章 估值 / 周期 / 争议答辩）+ 各章末「核心结论」
 
+## 开源仓库
+
+- GitHub: https://github.com/diguike/book-compute-economics
+- 在线阅读：[inferloop.dev](https://inferloop.dev)
+
 ## 反馈
 
-发现错误或希望补充哪一块，欢迎在飞书评论或邮件联系。
+发现错误或希望补充哪一块，欢迎在 GitHub 提 issue、飞书评论或邮件联系。

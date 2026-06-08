@@ -7,7 +7,7 @@ theoretical_anchor: ""
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/DauOwen9piCk7NkK8wQcTT3bnOf"
-last_synced: "2026-06-04T19:43:58+08:00"
+last_synced: "2026-06-08T19:54:42+08:00"
 status: finalized
 ---
 
@@ -494,4 +494,5 @@ CoreWeave 60% EBITDA 之所以成立,部分原因是它能锁到微软和 OpenAI
 ---
 
 > 本章来自《算力经济学》开源版 · 作者「递归客」  
-> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 开源仓库：[github.com/diguike/book-compute-economics](https://github.com/diguike/book-compute-economics)
