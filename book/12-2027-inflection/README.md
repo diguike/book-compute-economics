@@ -7,7 +7,7 @@ theoretical_anchor: "二手市场作为周期预警（Akerlof 信息不对称的
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/KK1ywGTpEikZ9DkXZFacmhapn6d"
-last_synced: "2026-06-04T19:43:58+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

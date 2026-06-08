@@ -7,7 +7,7 @@ theoretical_anchor: "Jevons (1865) 反弹效应 / Brynjolfsson J 曲线 / 后训
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/BpaZwIS02i1OW0kjzOIcOkWGnGb"
-last_synced: "2026-06-04T19:43:58+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

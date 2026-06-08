@@ -14,7 +14,7 @@ primary_data_sources:
   - "台积电 Arizona 项目公告 + 进度披露"
   - "Farrell-Newman《Weaponized Interdependence》及后续学术分析"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/E0OxwNxG9iPZMFkPhaccrc2cn7e"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

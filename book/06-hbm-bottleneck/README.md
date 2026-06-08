@@ -7,7 +7,7 @@ theoretical_anchor: "Pisano-Shih 价值分配 / 客户认证准入墙"
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/FazGwQ32BiLF2Gk3VHkcBIl0npE"
-last_synced: "2026-06-04T19:43:58+08:00"
+last_synced: "2026-06-08T20:33:08+08:00"
 status: finalized
 ---
 

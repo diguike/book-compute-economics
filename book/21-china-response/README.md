@@ -18,7 +18,7 @@ primary_data_sources:
   - "Bernstein / Counterpoint / TrendForce 中国半导体覆盖"
   - "阿里 / 字节 / 腾讯港交所财报 + AI 算力披露"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/DUIWwYjZNiwaHXkfD8QcVaFHnWf"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

@@ -7,7 +7,7 @@ theoretical_anchor: "Goldin-Katz 技能溢价 / Acemoglu-Restrepo 任务导向�
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/EUX4wx2qLiSKNTk9im6cXfVhnoh"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

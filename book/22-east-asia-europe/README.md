@@ -13,7 +13,7 @@ primary_data_sources:
   - "欧盟统计 + ASML 季报 + IMEC 报告 + 欧盟 Chips Act 文本"
   - "EuroHPC + 各国主权 AI 基金公告"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/NHjhwpVpfiJgWokSqMzcZnlfnsh"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

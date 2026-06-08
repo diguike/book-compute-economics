@@ -14,7 +14,7 @@ primary_data_sources:
   - "Michael Burry 2025-11 Cassandra Unchained + 13F 披露"
   - "Damodaran 估值数据库 + 历史半导体估值分位（Cisco / Lucent / Nortel 1999-2002 10-K）"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/H7ZgworyuiJLjnk6zKicx1yjn0b"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

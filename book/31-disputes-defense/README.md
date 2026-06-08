@@ -7,7 +7,7 @@ theoretical_anchor: "Popper 可证伪性 / Soros 反身性 / Kahneman 启发式�
 data_cutoff: "2026-05"
 disclaimer: chapter
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/PmfywzgrliNenFkBUuOc1kUHnpg"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

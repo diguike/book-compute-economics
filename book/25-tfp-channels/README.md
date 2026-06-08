@@ -7,7 +7,7 @@ theoretical_anchor: "Solow 增长会计 / TFP 渠道分解 / Aghion-Jones-Jones 
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/LEu8wM8iMiREA4kFbbPcnMaqnep"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

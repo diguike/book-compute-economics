@@ -14,7 +14,7 @@ primary_data_sources:
   - "Goldman Sachs / Sequoia AI Capex 系列报告"
   - "Cursor 等工具补贴拆解（业内估算）"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/Si2Mwi4iji8X2ikk301clXgJnVg"
-last_synced: "2026-06-04T19:43:58+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

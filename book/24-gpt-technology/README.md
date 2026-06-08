@@ -7,7 +7,7 @@ theoretical_anchor: "GPT 三判据（Bresnahan-Trajtenberg 1995）/ 大宗商品
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/Mdppw3KIKiMtLek9yJTcvFe4nqb"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

@@ -13,7 +13,7 @@ primary_data_sources:
   - "Crusoe 项目融资 8-K + 私募信息"
   - "S&P / Moody's 评级报告（CoreWeave / Digital Realty / Equinix）"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/ZnefwNN81iPZhekSVpvcbtYznSg"
-last_synced: "2026-06-04T19:43:58+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

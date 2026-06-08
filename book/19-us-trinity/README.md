@@ -14,7 +14,7 @@ primary_data_sources:
   - "CSIS / RAND / Brookings 公开报告"
   - "Bloomberg / Visible Alpha / Sparkline Capital 跟踪"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/WEgowDcY4itAg1kHmvAcWgbYnVc"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

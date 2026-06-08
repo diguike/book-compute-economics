@@ -7,7 +7,7 @@ theoretical_anchor: "PJM 容量市场设计 / Leontief 投入产出 / 政治经�
 data_cutoff: "2026-05"
 disclaimer: paragraph
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/OEnLw9NT3iTzlJkbwvBcO14GnCf"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

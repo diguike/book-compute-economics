@@ -7,7 +7,7 @@ theoretical_anchor: "不动产资本化率 / PJM 容量市场设计"
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/G4a8wSdD2iDX7PkrQyAca9pbnIc"
-last_synced: "2026-06-04T19:43:58+08:00"
+last_synced: "2026-06-08T20:56:32+08:00"
 status: finalized
 ---
 

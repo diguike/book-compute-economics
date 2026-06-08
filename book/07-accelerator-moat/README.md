@@ -7,7 +7,7 @@ theoretical_anchor: "网络效应 / 路径依赖（Arthur）/ 护城河五税"
 data_cutoff: "2026-05"
 disclaimer: paragraph
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/YFQmw3u3UiVO4ZkAfOmckSe4nFg"
-last_synced: "2026-06-04T19:43:58+08:00"
+last_synced: "2026-06-08T20:33:08+08:00"
 status: finalized
 ---
 

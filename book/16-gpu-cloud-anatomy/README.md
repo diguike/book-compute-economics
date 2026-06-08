@@ -14,7 +14,7 @@ primary_data_sources:
   - "卖方 GPU 云覆盖（Morgan Stanley / Mizuho）"
   - "Burry 公开 put 仓位 + 折旧攻击逻辑"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/FBsQwwYrBimxjdkrVFscopVAnmv"
-last_synced: "2026-06-04T19:43:58+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

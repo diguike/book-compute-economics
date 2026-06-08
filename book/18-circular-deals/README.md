@@ -15,7 +15,7 @@ primary_data_sources:
   - "Bloomberg 2026《AI Circular Deals》系列 / The Register 2025-11"
   - "SemiAnalysis 循环交易跟踪"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/R86wwcvn3i1q2Ckt577cwPbonjh"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

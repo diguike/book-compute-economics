@@ -21,7 +21,7 @@ primary_data_sources:
   - "Bernstein / Counterpoint / TrendForce 半导体覆盖"
   - "CSIS Wadhwani Center 出口管制评估系列"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/KbK1wzIQjitTFFkdkzwc3T3unzc"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

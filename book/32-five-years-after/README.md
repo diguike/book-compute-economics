@@ -7,7 +7,7 @@ theoretical_anchor: "Pierre Wack / Royal Dutch Shell 情景规划 / Knight 风�
 data_cutoff: "2026-05"
 disclaimer: paragraph
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/OiIRwLGrxi748DkDhQwcibEjnNb"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 

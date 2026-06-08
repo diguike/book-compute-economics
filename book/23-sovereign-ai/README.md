@@ -15,7 +15,7 @@ primary_data_sources:
   - "Mistral / ARM 上市文件（含主权 AI 相关条款）"
   - "IEA 中东 / 南亚电力报告"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/SaV2wHBJ2iWAd2khYaMcoBrvnPQ"
-last_synced: "2026-06-04T19:44:07+08:00"
+last_synced: "2026-06-08T20:47:39+08:00"
 status: finalized
 ---
 
