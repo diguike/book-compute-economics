@@ -7,7 +7,7 @@ theoretical_anchor: "Pisano-Shih 价值分配 / 客户认证准入墙"
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/FazGwQ32BiLF2Gk3VHkcBIl0npE"
-last_synced: "2026-06-08T20:33:08+08:00"
+last_synced: "2026-06-12T00:02:13+08:00"
 status: finalized
 ---
 
@@ -384,7 +384,7 @@ SK 海力士 Q4 2025 业绩指出 2026 HBM 供给已经 fully committed，美光
 
 ## 8. 地理分布与地缘风险
 
-把 HBM 链上的玩家在地图上摊开，可以从四个问题切入看清地缘风险结构。这四个问题是本书评估每个关键环节地缘风险的标准格式——下面逐个回答。
+把 HBM 链上的玩家在地图上摊开，看四件事：玩家国别分布、出口管制状态、替代成本、断供冲击半径。
 
 ### 8.1 玩家国别分布
 
