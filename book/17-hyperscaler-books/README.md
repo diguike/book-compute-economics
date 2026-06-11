@@ -390,7 +390,7 @@ xychart-beta
 
 第一步：某家（最大概率是 Amazon 或 Oracle，因为自由现金流临界先到）宣布资本支出指引下修。
 
-第二步：卖方研报集体修正超大规模云厂需求曲线 → NVDA / AMD / Broadcom / 台积电估值同步下修。
+第二步：卖方研报集体修正超大规模云厂需求曲线 → NVDA / AMD / 博通（Broadcom） / 台积电估值同步下修。
 
 第三步：上游订单（Hopper / Blackwell / TPU / Trainium / MI300X 系列）出现 destocking 信号——这是第 29 章反共识 #1 的第一个泡沫顶部预警指标。
 
@@ -560,9 +560,9 @@ pie title "FY26E 五家 AI 直接营收业内估算分布（USD B，中值）"
 
 这是第 31 章议题 1 答辩第五段「可证伪条件」的具体落地——七个信号、四个频率、明确阈值。读者可以拿这张表作为追踪本书议题 1 兑现度的工具。
 
-议题 1 的可监测信号有了，但这一节没回答一件事：**模型公司（OpenAI / Anthropic / xAI）和云厂商之间的资金流闭环是不是健康的**。Microsoft 投 OpenAI、OpenAI 付 Azure 算力、Azure AI 营收增长；Oracle 借投资级债建 Stargate、OpenAI 付 Oracle 算力费、Oracle 合同储备从 \$138B 跳到 \$455B；[NVIDIA](https://www.nvidia.com/) 投 CoreWeave、CoreWeave 付 NVIDIA GPU 货款、CoreWeave 合同储备增长——这组结构关系，与 1999-2000 年 Lucent / Nortel 给 CLEC 客户卖方融资、CLEC 用融资款买 Lucent / Nortel 设备的「循环交易」有几分相似。
+议题 1 的可监测信号有了，但这一节没回答一件事：**模型公司（OpenAI / Anthropic / xAI）和云厂商之间的资金流闭环是不是健康的**。Microsoft 投 OpenAI、OpenAI 付 Azure 算力、Azure AI 营收增长；Oracle 借投资级债建 Stargate、OpenAI 付 Oracle 算力费、Oracle 合同储备从 \$138B 跳到 \$455B；[英伟达](https://www.nvidia.com/) 投 CoreWeave、CoreWeave 付英伟达 GPU 货款、CoreWeave 合同储备增长——这组结构关系，与 1999-2000 年 Lucent / Nortel 给 CLEC 客户卖方融资、CLEC 用融资款买 Lucent / Nortel 设备的「循环交易」有几分相似。
 
-本章四处提及 vendor financing（§1.2 telecom 对照 / §1.5 融资结构 / §4.1 滚动覆盖 / §7.2 base case 三理由），全部作为反向论据使用——超大规模云厂不依赖 vendor financing。但本书第 18 章把这条线正面拆开：循环交易在 AI 周期里的真实分布、与 1999 telecom 的形态比对、Microsoft-OpenAI / Oracle-OpenAI / NVIDIA-CoreWeave 三组合同结构里到底有没有自己给自己创造收入的成分。第 17 章完成了三大云的财务底盘，第 18 章接着拆资金闭环。
+本章四处提及 vendor financing（§1.2 telecom 对照 / §1.5 融资结构 / §4.1 滚动覆盖 / §7.2 base case 三理由），全部作为反向论据使用——超大规模云厂不依赖 vendor financing。但本书第 18 章把这条线正面拆开：循环交易在 AI 周期里的真实分布、与 1999 telecom 的形态比对、Microsoft-OpenAI / Oracle-OpenAI / 英伟达-CoreWeave 三组合同结构里到底有没有自己给自己创造收入的成分。第 17 章完成了三大云的财务底盘，第 18 章接着拆资金闭环。
 
 ---
 

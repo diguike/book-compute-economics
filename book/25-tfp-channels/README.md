@@ -7,7 +7,7 @@ theoretical_anchor: "Solow 增长会计 / TFP 渠道分解 / Aghion-Jones-Jones 
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/LEu8wM8iMiREA4kFbbPcnMaqnep"
-last_synced: "2026-06-08T20:47:39+08:00"
+last_synced: "2026-06-10T14:38:43+08:00"
 status: finalized
 ---
 
@@ -129,7 +129,7 @@ xychart-beta
 
 第二，AI 让任务自动化不等于 AI 让 TFP 增长。如果 AI 自动化掉的任务对应的劳动力被裁掉了，那么生产 Y 不变 / 劳动 L 减少 / TFP 上升——这是 TFP 增长。但如果被自动化掉的劳动力转去做更高价值的任务（augmentation），那么 Y 增加 / L 不变 / TFP 也上升，但这是另一条机制。Acemoglu-Restrepo 任务导向框架的核心贡献就是把这两种机制分开。
 
-第三，AI 让单一公司利润上升不等于 AI 让经济 TFP 增长。如果 NVIDIA 卖 GPU 给客户、客户拿 GPU 跑大模型、模型公司挣到 API 收入但用户花更多时间盯着 ChatGPT 而不是更高效地工作——那么这是 NVIDIA + 模型公司的利润增长，但社会总 TFP 没有增长。这是 Acemoglu (2024) 论文里 AI 不是 productive AI 的批评的核心：很多 AI 应用产生了私人收益但没有产生社会生产率增益。
+第三，AI 让单一公司利润上升不等于 AI 让经济 TFP 增长。如果英伟达卖 GPU 给客户、客户拿 GPU 跑大模型、模型公司挣到 API 收入但用户花更多时间盯着 ChatGPT 而不是更高效地工作——那么这是英伟达 + 模型公司的利润增长，但社会总 TFP 没有增长。这是 Acemoglu (2024) 论文里 AI 不是 productive AI 的批评的核心：很多 AI 应用产生了私人收益但没有产生社会生产率增益。
 
 第四，AI 让 GDP 增长 X%不等于 AI 让 TFP 增长 X%。Goldman Sachs 2023 报告里的 AI 提升全球 GDP 7%是 10 年累计、含资本深化效应（capital deepening，即更多算力投入直接提高产出）+ TFP 渠道双重贡献。其中 TFP 贡献部分按 Goldman 的口径约为 7% 中的 1.5-2.5pp，年化 TFP 贡献约 0.15-0.25pp。Acemoglu 0.53% 的口径是 10 年累计 TFP 贡献——年化只有 0.05pp。两者数字相差 3-5 倍，主要在任务覆盖率和任务成本节省两个核心参数取值。
 
@@ -197,7 +197,7 @@ xychart-beta
 
 **渠道 2 信息成本下降的机制**。Stigler (1961) 的信息经济学奠基论文（"The Economics of Information", Journal of Political Economy）把信息搜索成本作为决策的核心约束之一。在 AI 之前，获取一条专业信息需要付出三种成本：(a) 搜索成本（要找到信息源在哪里），(b) 综合成本（要把多个来源的信息综合成一个回答），(c) 验证成本（要判断信息是否准确）。AI 通过两个机制压低这三种成本：检索成本由 RAG（Retrieval-Augmented Generation，检索增强生成）压低，综合成本由 LLM（Large Language Model，大语言模型）的对话能力压低，但验证成本被 hallucination（模型幻觉，指 AI 生成的看似合理但实际错误的内容）显著抬高。三种成本的总变化方向不是先验明确的——它取决于具体场景。
 
-宏观经济上，渠道 2 的 TFP 渠道贡献体现在两个层面：第一是 search cost 下降释放的注意力红利，第二是初级知识查询工作的自动化。第二层与渠道 1 部分重叠，本章不重复计算——本节专注第一层。
+宏观经济上，渠道 2 的 TFP 渠道贡献体现在两个层面：第一是 search cost 下降释放的注意力红利，第二是初级知识查询工作的自动化。第二层与渠道 1 部分重叠，下面只算第一层，加总时再扣除重叠。
 
 第一层的实证证据来自 Pew Research 2024 和 Stanford AI Index 2025 年报数据。Pew Research 调查显示，美国 18-29 岁人群中使用 ChatGPT 类工具的比例从 2023 年 33% 涨到 2024 年 43%、再到 2025 年 58%，其中 17% 主要用于学习与教育。如果按每人每天减少 30 分钟搜索时间估算，每个深度用户每年节省工时约 180 小时，按美国小时工资中位数 \$30 计算约 \$5,400 / 年的影子价值。但这种估算极不严格——节省的时间是否被用于更高生产力的活动是个未知数。MIT Sloan / BCG 2023 联合调查给出更保守的估算：在 758 名 BCG 顾问的对照实验中，使用 GPT-4 让被纳入 AI 可解决问题集合的任务效率提升 12.2%、完成时间缩短 25.1%。
 
