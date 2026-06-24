@@ -184,3 +184,6 @@ fact-check*.yaml
 verify-report-*.md
 verify-report-*.yaml
 watermark-report.md
+
+# === 预测实验快照（内部，不开源）===
+experiments/

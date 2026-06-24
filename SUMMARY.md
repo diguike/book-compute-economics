@@ -21,12 +21,12 @@
 - **Chapter 6 HBM：单卡最贵部件，反共识主战场**
 - **Chapter 7 加速芯片：NVIDIA 75% 毛利率的护城河拆解**
 - **Chapter 8 网络与互连：Broadcom 的隐形 AI 红利**
-- **Chapter 9 服务器与整柜：8-12% 毛利的脏活与 NVIDIA 的垂直 onshore**
+- **Chapter 9 服务器与整柜：8-12% 毛利的脏活与 NVIDIA 的整柜价值收编**
 - **Chapter 10 数据中心与电力：钢筋水泥不是瓶颈，电是**
 
 ## 第三部 因果与机制
 
-- **Chapter 11 双瓶颈的物理学：CoWoS 与 HBM 为什么是真紧缺**
+- **Chapter 11 双瓶颈：CoWoS 与 HBM 为什么是真紧缺**
 - **Chapter 12 2027 拐点：双瓶颈缓解的节奏与三个预警信号**
 - **Chapter 13 训-后训-推三段与杰文斯弹性：需求侧的 2027 之后**
 - **Chapter 14 缓解之后：电力与客户集中度成为新硬约束**
