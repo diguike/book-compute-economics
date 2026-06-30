@@ -13,7 +13,7 @@ primary_data_sources:
   - "Crusoe 项目融资 8-K + 私募信息"
   - "S&P / Moody's 评级报告（CoreWeave / Digital Realty / Equinix）"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/ZnefwNN81iPZhekSVpvcbtYznSg"
-last_synced: "2026-06-10T14:38:43+08:00"
+last_synced: "2026-06-30T01:54:48+08:00"
 status: finalized
 ---
 
@@ -67,9 +67,9 @@ graph LR
     class CRWV,NBIS,LAM,CRUS sub
 ```
 
-第三部把物理瓶颈与缓解节奏讲完——产能松动、HBM 解锁、电力到位之后，谁赚到这笔钱的问题就摆上桌。这里先给坐标系，不下判断。
+第三部把物理瓶颈与缓解节奏讲完——产能松动、HBM 解锁、电力到位之后，谁赚到这笔钱的问题就摆上桌。
 
-对工程师读者，本章的价值是把 GPU-hour 多少钱翻译成三种主体不同的成本结构，看懂自己的工作所处的产业位置。对投资者读者，本章给出三类主体估值方法的初步分野——为什么 [英伟达](https://www.nvidia.com/) 用 P/E、CoreWeave 用 EV/EBITDA + 合同储备、Mag7 用 sum-of-the-parts + 自由现金流覆盖度，没有一套统一范式能套住三类公司。
+同一份 GPU-hour 成本，在三种主体里长成完全不同的成本结构与估值范式——[英伟达](https://www.nvidia.com/) 用 P/E、CoreWeave 用 EV/EBITDA + 合同储备、Mag7 用 sum-of-the-parts + 自由现金流覆盖度，没有一套统一范式能套住三类公司。
 
 本章不下任何投资判断。涉及具体公司估值评论的段落，按 commentary-only 处理。
 
@@ -659,8 +659,6 @@ xychart-beta
 7. **三种模式之间不是替代关系，是产业链分工**。Microsoft 同时自建 + 长租 + 转租，OpenAI 同时长租 Oracle + 长租 CoreWeave，xAI 同时自建 + 长租。每种模式有自己的最优主体与最优用途，不能用同一套估值范式跨模式比较。
 
 把这 7 条结论合在一起，得到一把**识别商业模式的尺子**：拿到一家与算力相关的公司财报，先识别它属于自建 / 长租 / 转租 / 项目融资中的哪一种（或哪几种的组合），再决定用 EV/EBITDA + 自由现金流覆盖度、RPO × 履约率、EV/EBITDA + 折旧期假设、项目层 DCF 中的哪一套估值方法。
-
-下一章把 CoreWeave Q3 2025 8-K 当显微镜，从营收线一直向下走到 GAAP 净亏损，把这中间所有会计与杠杆的取舍逐条拆开到单卡 economics 层面的粒度，回答 60% EBITDA 是怎么算出来的、能否持续 这件事的全部细节。
 
 三种模式的会计分野立扎实之后，后续每一章的估值争议都能落到具体的会计科目上去——而不是停留在 AI 是不是泡沫这种抽象判断。
 
