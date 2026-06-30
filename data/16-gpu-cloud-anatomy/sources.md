@@ -91,3 +91,7 @@
 2. **P1（高优先级）**：Nebius Q1 2026 数字（§6）、OpenAI 合同三批累计 $22.4B（§1.3）、Meta / Amazon / Microsoft / Google / Oracle 折旧期（§3.1）
 3. **P2（中优先级）**：H100 二手价时序、Silicon Data 数据、§3.3 敏感矩阵的单卡 economics 假设
 4. **P3（低优先级，已明确"业内估算"）**：Crusoe / Lambda 数据、客户集中度逐年变化、DDTL 利率反推
+
+## 时效更新补充来源（2026-06-26）
+
+- CoreWeave Q1 2026（2026-05-07 披露）：营收 \$2.078B（+112% YoY）、revenue backlog \$99.4B、净亏损 \$740M、债务 \$24.9B、capex \$7.695B、2026 全年指引 \$12-13B。来源：CoreWeave IR / SEC 8-K、AlphaStreet。截至 2026-06-25 市值约 \$53.9B（股价 \$98.76）。来源：Yahoo Finance、Capital.com。

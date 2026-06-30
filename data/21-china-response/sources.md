@@ -73,3 +73,8 @@
 - `ascend-tracking.csv` 与 ch07、ch28 共享
 - Ascend 910C 2025 出货"双锚 + 双情景"口径（SemiAnalysis 全 Ascend 805K / 910C 653K / HBM 悲观 250-300K + IDC 全 Ascend 812K）建议反向同步至 ch00 / ch06 / ch07 / ch28，作为全书统一口径
 - CXMT HBM 产能口径（SemiAnalysis 2025-09 **2026 年前瞻预测** ~2M stacks / 2026 HBM3 60K wafers/月）与 ch06 §6.4 历史口径（2024-2025 HBM2 阶段 1-2 万 stack/月）并非同代际、并非同时点，跨章引用时需明示。**特别注意：2M stacks 是 2026 年预测，不是 2025 年实绩**
+
+## 时效更新补充来源（2026-06-26）
+
+- SMIC Q1 2026（2026-05 披露）：营收 \$2.5B、产能利用率 93.1%、毛利率 20.1%、Q2 指引营收环比 +14-16%。来源：TrendForce、BigGo Finance。
+- CXMT HBM3 量产时点存不确定性：DigiTimes 2026-04-21 报道量产可能推迟，良率突破 40% 或在 2026 下半年，12 层堆叠目标 2027。来源：DigiTimes 2026-04-21、Toms Hardware。

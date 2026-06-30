@@ -58,3 +58,8 @@
 - ch09 服务器与整柜 → 本章 8.2 NVL72 物理形态承接 ch09 整柜叙事
 - ch20 沿价值链守住中心节点 → 本章 8.9 中国光模块产业链对美出口的政策传导
 - ch30 设备商型估值模板 → AVGO 与 NVDA 并列作为五税商业模式模板
+
+## 时效更新补充来源（2026-06-26）
+
+- Broadcom FY26 Q2（2026-06-03）：营收 \$22.187B、AI 半导体 \$10.8B（+143%）、Non-GAAP 毛利率 77.1%、FY26 Q3 指引 \$29.4B（AI 半导体 \$16B）。来源：Broadcom IR / PRNewswire。
+- NVDA Networking FY27 Q1：单季 \$14.8B（含 NVLink Switch + InfiniBand + Spectrum-X）。来源：NVIDIA IR FY27 Q1。

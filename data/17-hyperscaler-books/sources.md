@@ -77,3 +77,7 @@
 - `five-hyperscalers-capex.csv` 与 ch29（周期定位）、ch30（估值模板）共享数据底表
 - `capex-revenue-vs-telecom.csv` 与 ch29 共享，本章用于"折旧 + OCF"维度，ch29 用于完整 12 维度对照
 - `china-cloud-mirror.csv` 与 ch21（中国应对）共享
+
+## 时效更新补充来源（2026-06-26）
+
+- 四家超大规模云厂 2026 全年 capex 指引（calendar 口径）：MSFT ~\$190B（含 ~\$25B 元件涨价增量）、GOOGL \$180-190B、AMZN ~\$200B、META \$125-145B；合计 ~\$710B。Oracle FY2026 \$55.7B。来源：各家 IR Q1 2026、The Register 2026-04-30、CNBC。

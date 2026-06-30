@@ -76,3 +76,8 @@
 - `mag7-capex-tracking.csv` 与 ch17 共享
 - 修正 ARR 模型与 ch31（12 议题答辩）共享，本章只立证据 / ch31 收束定性
 - Lucent / Nortel / Cisco 1999-2001 历史口径（S8 / S9 / T18）与 ch29 / ch31 共享，跨章数字按裁定表统一（Lucent 顶峰市值 $258B / Cisco 顶峰市值 $555B / Cisco forward P/E 130x）
+
+## 时效更新补充来源（2026-06-26）
+
+- Oracle RPO：FY26 Q3（2026-03-10）\$553B、FY26 Q4（2026-06-10）\$638B；FY2026 capex \$55.7B、OCI IaaS +93%。来源：Oracle IR FY26 Q3/Q4、ERP Today。
+- 模型公司 ARR：Anthropic 2026-05-28 Series G（\$380B 估值）~\$30B run-rate、后续上修；OpenAI 2026-03 ~\$25B+、2026-06-08 递交保密版 S-1。来源：Anthropic IR、VentureBeat、Reuters、PYMNTS。

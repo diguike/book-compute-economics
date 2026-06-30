@@ -69,3 +69,7 @@
 - R3 fact-check 修复时点：2026-05-29（CapEx / Nebius margin / S15 被投对象修正 + DCF 重算）
 - 全书 data_cutoff：2026-05
 - 章节特定 data_cutoff：与全书一致；NVDA / CoreWeave 取截至 2026-Q1 财报披露完毕后的最新版；hyperscaler 折旧政策取 2026 年版 10-K 附注
+
+## 时效更新补充来源（2026-06-26）
+
+- NVDA FY27 Q1 实际（2026-05-20）：营收 \$81.6B（超 \$78.0B 指引上限）、数据中心 \$75.2B、GAAP 毛利率 74.9%、FY27 Q2 指引 \$91.0B。来源：NVIDIA IR / Stocktitan。DCF base/bull/bear 模型仍以 FY26 关账数为起点。

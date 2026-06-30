@@ -85,3 +85,7 @@ CoWoS 这条链上一手数据可获取性比 HBM 章更弱：
 - SemiAnalysis 2022 "Advanced Packaging Part 2 Review" 关于 NVIDIA $6.9B long-term supply obligations 的具体 10-Q 期号（季度需精确到 Q3 FY23 vs 其他季度，本章引用为 "Q3"，需回溯一手 10-Q）
 - TSMC VP Jun He 在 SEMICON Taiwan 2024 演讲的视频或 transcript 原文（"建厂周期从 3-5 年压缩到 1.5-2 年"原话）
 - ASE CoWoP 月度 20-25K wafer 目标的公司一手指引（TrendForce 2025-12-08 转引，需找 ASE 财报或新闻稿对照）
+
+## 时效更新补充来源（2026-06-26）
+
+- TSMC CoWoS 供需缺口：TrendForce 2026-06-15 报道随台积电（120-130K）+ OSAT 合计逼近 200K 晶圆/月，供需缺口预计 2026 年底从 ~20% 收窄到 ~10%。来源：TrendForce 2026-06-15。

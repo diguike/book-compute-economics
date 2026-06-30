@@ -141,3 +141,8 @@
 - 骨架创建时点：2026-05-27
 - 全书 data_cutoff：2026-05
 - 章节特定 data_cutoff：与全书一致；12 议题的代表性人物观点取截至 2026-05 最新公开版本
+
+## 时效更新补充来源（2026-06-26）
+
+- NVDA 估值快照（as-of 2026-06-25）：Forward P/E 22.32、EV/EBITDA 24.22、P/S 18.89、市值 \$4.74T（ATH \$5.7T 2026-05）。EV/EBITDA 较 2026-05 的 30.87 回落，主因 FY27 Q1 EBITDA 放量。来源：Yahoo Finance。
+- CoreWeave（as-of 2026-06-25）：市值 \$53.9B、股价 \$98.76、52 周区间 \$63.80-173.35；Q1 2026 revenue backlog \$99.4B。来源：Yahoo Finance、Capital.com、CoreWeave IR。

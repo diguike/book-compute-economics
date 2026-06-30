@@ -55,3 +55,9 @@
 - 本章 data_cutoff：与全书一致；三家 HBM 厂取至 2026-Q1 季报、Silicon Analysts HBM 价格库取至 2026-04
 - WebFetch 验证时点：2026-05-28
 - fact-check 修复时点：2026-05-29（修订 Samsung HBM 2024 市占口径从季度切年度、Micron HBM4 量产时点加注实际 2026-03-16 GTC 公告、Huawei Ascend 81 万从 910C 单型号修正为全系列 aggregate）
+
+## 时效更新补充来源（2026-06-26）
+
+- SK Hynix Q1 2026（2026-04-23 披露）：单季营收 52.58 万亿 KRW、营业利润率 72%、期末现金 54.3 万亿 / 有息负债 19.3 万亿。来源：StorageNewsletter 2026-04-29、Digitimes 2026-04-23。
+- Micron FY2026 Q2（2026-03-18 披露）：营收 \$23.9B、非 GAAP 营业利润率 69%。来源：Micron IR / SEC 8-K a2026q2、Futurum。
+- SK Hynix FY2026 capex：公司指引「显著高于 FY2025（业内估算 ~29 万亿 KRW capex）」，业内估算 35 万亿+。原稿 22 万亿口径修正。来源：Futurum、WebSearch 多源。

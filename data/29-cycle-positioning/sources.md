@@ -107,3 +107,10 @@ spine 章 + 反共识高密度，fact-check 最重。所有数据点已按 data-
 - David Cahn $600B 缺口算法（NVDA ×2 ×2）→ 已查 Sequoia（T8）
 - Mag7 合计市值占 S&P 500 ~31% / 2024 → 已查 Wikipedia: Big Tech（T18）
 - Epoch AI 训练算力 4-5x/年、2030 单次训练 4-16 GW → 已查 Epoch AI "Power demands of frontier AI training"（T13，epoch.ai/blog/power-demands-of-frontier-ai-training）+ "Can AI scaling continue through 2030"（T14）。**三轮 fact-check 修正**：之前章内附注的 "1-5 GW" 为下限保守表述，Epoch AI 原文给出区间为 4-16 GW，本章正文已不显式列出该功耗数字（维度 1 表格仅引用 4x/年增速 + 2e30 FLOP 量级），以 sources.md 为口径准确性参考
+
+## 时效更新补充来源（2026-06-26）
+
+- NVDA FY27 Q1（2026-05-20）：营收 \$81.6B、数据中心 \$75.2B、GAAP 毛利率 74.9%、FY27 Q2 指引 \$91B。来源：NVIDIA IR / Stocktitan。
+- NVDA 市场快照（as-of 2026-06-25）：市值 \$4.74T（ATH \$5.7T 2026-05-14）、forward P/E ~22.32。来源：Yahoo Finance、CNBC。
+- Mag7（as-of 2026-06-25）：合计市值 ~\$20.9T、占 S&P 500 ~31-33%、占美国 GDP（2025 名义 \$30.8T）~68%。来源：SlickCharts、Motley Fool、Statista/IMF。
+- 四家超大规模云厂 2026 Q1 合计 capex ~\$129.6B、2026 全年指引合计 ~\$710B（MSFT $25B 增量归因元件涨价）。来源：各家 IR Q1 2026、The Register、CNBC。
