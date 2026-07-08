@@ -7,7 +7,7 @@ theoretical_anchor: "Pisano-Shih 价值分配 / 客户认证准入墙"
 data_cutoff: "2026-06"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/FazGwQ32BiLF2Gk3VHkcBIl0npE"
-last_synced: "2026-06-30T01:38:30+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -206,7 +206,7 @@ xychart-beta
 
 **第二，2023 是分水岭。** HBM3 上市，单 stack 价格从 HBM2E 的 \$80-120 跳到 \$150-200，\$/GB 从 \$5-7 反弹回 \$8-9。
 
-这一跳的内核不在工艺更难。HBM3 跟 HBM2E 的 DRAM 裸片是同代工艺，差别在堆叠层数与 IO 速率。真正的内核是 AI 需求结构变了——2023-Q1 英伟达 H100 开始大规模供货，HBM3 一夜成为 AI 加速卡的标配，需求曲线垂直拉升，三家厂的产能没跟上。Bernstein 在 2023-Q2 的 HBM 跟踪报告里给的结论是 HBM 已经从 memory commodity 变成 AI 加速器组件。HBM 从此跟 DRAM 商品周期脱钩。
+这一跳的内核不在工艺更难。HBM3 跟 HBM2E 的 DRAM 裸片是同代工艺，差别在堆叠层数与 IO 速率。真正的内核是 AI 需求结构变了——2023-Q1 英伟达 H100 开始大规模供货，HBM3 一夜成为 AI 加速卡的标配，需求曲线垂直拉升，三家厂的产能没跟上。Bernstein 在 2023-Q2 的 HBM 跟踪报告里给的结论是 HBM 已经从存储器大宗商品变成 AI 加速器组件。HBM 从此跟 DRAM 商品周期脱钩。
 
 **第三，2025-2026 出现历史罕见的 HBM3E 反向涨价。** HBM3E 在 2024 上市时 12-Hi 36GB stack 单价就稳定在 \$250-300。到 2025 年底，三星与 SK 海力士给英伟达 H200 / Google TPU v7 / AWS Trainium2 的 2026 年合约报价上调约 20%。
 

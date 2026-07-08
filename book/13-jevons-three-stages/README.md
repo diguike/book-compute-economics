@@ -7,7 +7,7 @@ theoretical_anchor: "Jevons (1865) 反弹效应 / Brynjolfsson J 曲线 / 后训
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/BpaZwIS02i1OW0kjzOIcOkWGnGb"
-last_synced: "2026-06-30T01:51:04+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -148,7 +148,7 @@ xychart-beta
 
 **OpenAI o1 / o3 系列的推理时训练扩展**。o1 在 2024-09 发布时，OpenAI 在博客里给出一张关键图——模型性能随训练时计算（train-time compute）和测试时计算（test-time compute / 推理 compute）两个维度同时 scaling。这张图的工程含义是：以前模型能力的提升只来自训练时投入更多 FLOP，o1 之后模型可以通过在推理时让模型多想一会儿来提升能力。多想一会儿在工程上的实现是 RL-trained chain-of-thought——base model 在 RL 阶段被训练成能生成长思考链，每次回答用户前先生成数千到数十万 token 的思考过程。
 
-这件事对算力消耗的影响是两层：第一层是 RL 阶段本身的算力消耗——把 base model 训练成会长思考需要数月的 RL 训练；第二层是推理时的额外消耗——每次 query 的 token 消耗从 GPT-4o 时代的几百 token 提升到 o1 / o3 时代的几千到数十万 token（业内估算，OpenAI 不直接披露 per-query 推理 token 消耗）。两层叠加，o1 的每次回答的总算力消耗业内估算是 GPT-4o 的 30-100 倍。o3（2024-12 预览 / 2025-Q1 正式发布）在 ARC-AGI benchmark 上的高算力配置消耗 \$20+ per task，单次任务的推理成本接近一个工程师 1 小时的工资。
+这件事对算力消耗的影响是两层：第一层是 RL 阶段本身的算力消耗——把 base model 训练成会长思考需要数月的 RL 训练；第二层是推理时的额外消耗——每次 query 的 token 消耗从 GPT-4o 时代的几百 token 提升到 o1 / o3 时代的几千到数十万 token（业内估算，OpenAI 不直接披露 per-query 推理 token 消耗）。两层叠加，o1 的每次回答的总算力消耗业内估算是 GPT-4o 的 30-100 倍。o3（2024-12 预览 / 2025-Q1 正式发布）在 ARC-AGI 基准测试上的高算力配置消耗 \$20+ per task，单次任务的推理成本接近一个工程师 1 小时的工资。
 
 **Anthropic 的 RLHF + Constitutional AI 工程化**。Anthropic 在 2022-12 论文里提出 Constitutional AI—— 用 AI 反馈 + 一组宪法原则替代纯人类反馈，工程上的好处是后训练阶段的样本生成可以并行化、规模化。Dario Amodei 在 2024-11 的 Lex Fridman 访谈里说后训练 is becoming a larger and larger portion of total compute，并明确指出 Claude 3.5 Sonnet 的后训练算力占比已经显著超过 Claude 3。Anthropic 在 2025-02 发布 Claude 3.7 Sonnet 引入 extended thinking 模式，与 o1 同类的推理时计算扩展。Claude Opus 4（2026 上半年）继续这条路径。后训练算力占总训练算力的比例，从 Claude 2 时代的 < 10% 演变到 Claude 4 时代的 30-50%（业内估算，Anthropic 不披露具体数字）。
 

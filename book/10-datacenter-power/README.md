@@ -7,7 +7,7 @@ theoretical_anchor: "不动产资本化率 / PJM 容量市场设计"
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/G4a8wSdD2iDX7PkrQyAca9pbnIc"
-last_synced: "2026-06-30T01:46:27+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -380,7 +380,7 @@ NRC 的反应堆设计认证流程平均 4-6 年，建设许可 2-3 年，建造
 - **FFO**：Funds from Operations，运营资金 = 净利润 + 折旧摊销 - 房地产处置利得。REIT 行业的核心盈利指标（GAAP 净利润扣除不能反映现金流的折旧）。
 - **AFFO**：Adjusted Funds from Operations，调整后运营资金 = FFO - 维护性资本支出 - 直线租金调整。比 FFO 更接近自由现金流概念。
 - **Lease-up rate**：出租进度，已签约容量占总建成容量的比例。
-- **Backlog**：已签合约但未开始交付（仍在建或等电）的部分。
+- **在手订单**：已签合约但未开始交付（仍在建或等电）的部分。
 
 把 Digital Realty（DLR，全球最大数据中心 REIT 之一）和 Equinix（EQIX，全球最大互联网交换中心 REIT）2025 年的关键数据放一起：
 
@@ -391,7 +391,7 @@ NRC 的反应堆设计认证流程平均 4-6 年，建设许可 2-3 年，建造
 | AFFO 总额 FY2025 | n/a（DLR 主披露 FFO/share） | \$3.731-3.811B（公司指引区间）|
 | AFFO YoY 增速 | ~14%（业内估算）| 12%（公司指引）|
 | Q4 2025 单季 bookings | \$400M annualized GAAP 租金（公司披露）| 持续增长（公司未披露季度数）|
-| FY2025 年末 Backlog | \$817M annualized rental（公司披露）| n/a（EQIX 未单独披露合同储备金额）|
+| FY2025 年末在手订单 | \$817M annualized rental（公司披露）| n/a（EQIX 未单独披露合同储备金额）|
 | 在建 major projects | 56 个（含 12 个 xScale）| 12 个 xScale 项目（hyperscale 子品牌）|
 | Renewal cash pricing（续约现金调价）| Q4 2025 +6.1%（公司披露）| n/a |
 | Interconnection 收入 YoY | n/a | +10%（公司披露）|

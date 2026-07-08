@@ -7,7 +7,7 @@ theoretical_anchor: "网络效应 / 路径依赖（Arthur）/ 护城河五税"
 data_cutoff: "2026-06"
 disclaimer: paragraph
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/YFQmw3u3UiVO4ZkAfOmckSe4nFg"
-last_synced: "2026-06-29T23:39:46+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -282,7 +282,7 @@ NVLink 系统税是卡之间的护城河，系统设计税是整柜之上的护�
 对客户的诱因是什么。系统设计税虽然多付 10-15%，但换来三件事：
 
 - **部署时间**：整柜从 6-9 个月（自组）压到 2-3 个月（开箱即用）
-- **性能确定性**：整柜性能与 NVDA 公布 benchmark 一致，自组方案常有 10-20% 性能损失
+- **性能确定性**：整柜性能与 NVDA 公布基准测试一致，自组方案常有 10-20% 性能损失
 - **单一支持口**：NVDA 直接提供整柜支持，自组方案需要客户自己整合多家厂商
 
 这三件事对超大规模云厂的总拥有成本（TCO）有显著降低，因此即便 10-15% 溢价也愿意付。

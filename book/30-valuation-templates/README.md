@@ -14,7 +14,7 @@ primary_data_sources:
   - "Michael Burry 2025-11 Cassandra Unchained + 13F 披露"
   - "Damodaran 估值数据库 + 历史半导体估值分位（Cisco / Lucent / Nortel 1999-2002 10-K）"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/H7ZgworyuiJLjnk6zKicx1yjn0b"
-last_synced: "2026-06-30T02:11:21+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -430,7 +430,7 @@ CoreWeave 是这一类生意里上市最早、披露最详细、客户结构最�
 | 折旧摊销 | ~\$630M | ~\$2,520M | 一手综合 |
 | Interest Expense | \$310.6M | \$1,242M | GAAP，年化利息 ~\$1.24B |
 | 总债务 | ~\$14B | — | 一手综合 |
-| Revenue Backlog | \$55.6B | — | 8-K 一手 |
+| 在手订单 | \$55.6B | — | 8-K 一手 |
 | 2025 全年营收指引 | \$5.05-5.15B | — | 8-K 下调 |
 | 2026 营收市场预期 | \$12-13B | — | 卖方综合 |
 | 资本支出 2025 指引 | \$12-14B | — | 8-K 下调（自 \$20-23B）|

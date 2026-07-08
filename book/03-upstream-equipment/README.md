@@ -7,7 +7,7 @@ theoretical_anchor: "Forrester 鞭子效应 / 设备-产能时滞传导"
 data_cutoff: "2026-06"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/QU0lwqzgWieyUlklm5NcRSabn5f"
-last_synced: "2026-06-30T01:40:35+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -247,7 +247,7 @@ Lam FY2025 全年营收 \$18.44B、同比 +23.68%、营业利润率 32.01%。同
 
 > SCREEN：日本另一家涂胶显影厂，工序与 TEL 类似。
 
-这是产业经济学里的「supplier lock-in」（供应商锁定），TEL 89-91% 的市占很大一部分价值就来自这种 lock-in。
+这是产业经济学里的「supplier lock-in」（供应商锁定），TEL 89-91% 的市占很大一部分价值就来自这种锁定。
 
 **第四，KLA 是「软件 + 服务」龙头伪装成的设备厂**。KLA FY2025 全年毛利率 60.91%、GAAP 营业利润率约 41.2%、净利率 33.41%——这种利润率结构在制造业里很罕见，更像 SaaS 公司。
 
@@ -359,7 +359,7 @@ CoWoS 与 HBM 也有自己的爬坡曲线——CoWoS 月产能从 15K → 130K �
 
 **阿斯麦合同储备时间序列**：
 
-| 时点 | Backlog 在手订单 | 主要披露 | 含义 |
+| 时点 | 在手订单 | 主要披露 | 含义 |
 |---|---:|---|---|
 | 2022 年末 | €40B+ | 阿斯麦 Q4 2022 财报 | 历史峰值，2021-2022 半导体超级周期 |
 | 2023 年末 | ~€39B | 阿斯麦 Q4 2023 财报 | 略下行，消费电子周期降温 |

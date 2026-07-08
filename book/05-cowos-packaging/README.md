@@ -7,7 +7,7 @@ theoretical_anchor: "hold-up problem（Williamson）"
 data_cutoff: "2026-06"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/CiW1wY9gHiC1Pekbo9UcmirwnJc"
-last_synced: "2026-06-30T01:40:55+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -349,7 +349,7 @@ H100 / H200 这一代 GPU 都用 CoWoS-S，B200 / B300 / Rubin 这一代都用 C
 
 把 CoWoS-S 与 CoWoS-L 的差别放回到产业链的位置看——CoWoS-L 是台积电在英伟达 Blackwell 一代上拿到的工艺独家。MediaTek 与博通的 ASIC 客户也开始大量用 CoWoS-L（Google TPU v7、Meta MTIA v3），但英伟达仍占 CoWoS-L 配额 70%+。CoWoS-L 这条产线在 2024-2027 这段时间里就是英伟达 Blackwell + Rubin 与台积电在物理层面的绑定关系——任何英伟达增产计划，最后都要先确认 CoWoS-L 配额能不能跟上。这件事的反共识含义会在 §5.7 经济学含义里展开。
 
-CoWoS-L 与 CoWoS-S 这两条产线之间还有一层不太显眼的内部张力——台积电自己在两条线上的资源分配也不是中性的。CoWoS-L 单晶圆加工费比 CoWoS-S 高 30-40%（业内估算 CoWoS-L \$50-60K / 晶圆、CoWoS-S \$38-45K / 晶圆），同等产能 footprint 下 CoWoS-L 营收贡献更高。从台积电角度看，把新增产能压在 CoWoS-L 既符合客户需求结构（英伟达 Blackwell + Rubin、Google TPU v7、博通 Meta MTIA 这一批新设计全部走 CoWoS-L），又能让单位产能创造更高营收。这种内部利润最大化的产能分配逻辑，会让 CoWoS-S 产能在 2026 下半年到 2027 出现的相对宽松，比简单的 H100 退潮 → CoWoS-S 闲置更复杂——CoWoS-S 产能可能被台积电主动放慢扩张，而不是扩出来但用不掉。这是观察 2026 下半年到 2027 CoWoS-S 单价走势的关键变量。
+CoWoS-L 与 CoWoS-S 这两条产线之间还有一层不太显眼的内部张力——台积电自己在两条线上的资源分配也不是中性的。CoWoS-L 单晶圆加工费比 CoWoS-S 高 30-40%（业内估算 CoWoS-L \$50-60K / 晶圆、CoWoS-S \$38-45K / 晶圆），同等产能占用下 CoWoS-L 营收贡献更高。从台积电角度看，把新增产能压在 CoWoS-L 既符合客户需求结构（英伟达 Blackwell + Rubin、Google TPU v7、博通 Meta MTIA 这一批新设计全部走 CoWoS-L），又能让单位产能创造更高营收。这种内部利润最大化的产能分配逻辑，会让 CoWoS-S 产能在 2026 下半年到 2027 出现的相对宽松，比简单的 H100 退潮 → CoWoS-S 闲置更复杂——CoWoS-S 产能可能被台积电主动放慢扩张，而不是扩出来但用不掉。这是观察 2026 下半年到 2027 CoWoS-S 单价走势的关键变量。
 
 ## 5.5 用英伟达出货量校准 CoWoS 产能：交叉验证
 

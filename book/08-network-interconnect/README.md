@@ -7,7 +7,7 @@ theoretical_anchor: "互联标准之争 / De facto standard"
 data_cutoff: "2026-06"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/UGA1wKg0KiFoyDk4MM1cEfNBnVd"
-last_synced: "2026-07-03T00:45:26+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -31,11 +31,11 @@ status: finalized
 
 ## 8.1 集群规模的网络瓶颈：从 8K 卡到 100K 卡
 
-AI 集群的网络瓶颈，在 2023 年 H100 大规模放量之前，市场关注度远低于 GPU 本身。原因是 2017-2022 年的训练集群规模主流在 1K-8K 卡量级（GPT-3 175B 训练用约 1,000 颗 V100、GPT-4 训练用约 25,000 颗 A100，业内估算口径，来源：SemiAnalysis 历年训练成本拆解 + Epoch AI 训练算力跟踪），InfiniBand HDR 200 Gb/s 加单层胖树拓扑就足以满足 all-reduce 集合通信带宽。
+AI 集群的网络瓶颈，在 2023 年 H100 大规模放量之前，市场关注度远低于 GPU 本身。原因是 2017-2022 年的训练集群规模主流在 1K-8K 卡量级（GPT-3 175B 训练用约 1,000 颗 V100、GPT-4 训练用约 25,000 颗 A100，业内估算口径，来源：SemiAnalysis 历年训练成本拆解 + Epoch AI 训练算力跟踪），InfiniBand（IB，一种为高性能计算设计的高带宽、低延迟网络互连协议，靠 RDMA 远程直接内存访问绕过操作系统内核做零拷贝传输，把跨机通信延迟压到微秒级；1999 年由业内联盟推出，主导厂商 Mellanox 于 2019 年被英伟达收购，产业脉络见 §8.3）HDR 200 Gb/s 加单层胖树拓扑就足以满足 all-reduce 集合通信带宽。
 
 2024-2026 这两年，集群规模跳了一个台阶：xAI Colossus 单一集群 200K H100 / H200 已在田纳西孟菲斯投运；Meta、Microsoft、Oracle 各自的 100K+ 卡集群在 2025-2026 陆续启用；OpenAI 与 Oracle 在 Stargate Abilene 项目里规划单一站点 1GW+ 电力、数十万卡。从 8K 卡走到 100K 卡，网络架构发生的物理变化有三层。
 
-**第一层，scale-up 域的大小变了**。scale-up 在 AI 集群语义里指 GPU 之间共享内存语义、跨 GPU 直接内存访问（GPU Direct）可达的物理域，简称域内互连。H100 时代 scale-up 域的物理边界是 8 卡 DGX H100 整机（NVLink 4 单 GPU 900 GB/s 双向，8 卡 NVLink switch 通过 NVSwitch 3 实现 7.2 TB/s aggregate；来源：英伟达 DGX H100 whitepaper）。GB200 NVL72 把 scale-up 域扩到 72 卡——一整柜共享 NVLink 5 域内带宽 130 TB/s。这是英伟达在 Blackwell 一代做的最大的结构性变化——**scale-up 域从 8 卡放大到 72 卡，意味着原来要走 scale-out 网络（IB / 以太网，每端口双向 ~100 GB/s）的 9 倍卡间通信，现在可以走 scale-up（NVLink 5，每 GPU 双向 1.8 TB/s）**，带宽差 18 倍，延迟差至少 10 倍。
+**第一层，scale-up 域的大小变了**。scale-up 在 AI 集群语义里指 GPU 之间共享内存语义、跨 GPU 直接内存访问（GPU Direct）可达的物理域，简称域内互连。H100 时代 scale-up 域的物理边界是 8 卡 DGX H100 整机（NVLink 4 单 GPU 900 GB/s 双向，8 卡 NVLink switch 通过 NVSwitch 3 实现 7.2 TB/s 聚合带宽；来源：英伟达 DGX H100 whitepaper）。GB200 NVL72 把 scale-up 域扩到 72 卡——一整柜共享 NVLink 5 域内带宽 130 TB/s。这是英伟达在 Blackwell 一代做的最大的结构性变化——**scale-up 域从 8 卡放大到 72 卡，意味着原来要走 scale-out 网络（IB / 以太网，每端口双向 ~100 GB/s）的 9 倍卡间通信，现在可以走 scale-up（NVLink 5，每 GPU 双向 1.8 TB/s）**，带宽差 18 倍，延迟差至少 10 倍。
 
 **第二层，scale-out 网络的设计从胖树切到轨道优化**。8K 卡量级用单层 + 单层胖树就够，100K 卡量级需要双层 + 多平面 + 轨道优化（rail-optimized）拓扑——每张 GPU 通过 8 个独立的网卡端口分别连到 8 个独立的网络平面，避免单平面拥塞。这种拓扑下，每张 GPU 的 scale-out 网卡数量从 H100 时代的 1-2 个跳到 B200 / GB200 时代的 8 个（业内估算口径，来源：SemiAnalysis 2024-2025 AI Networking 系列）。一张 GPU 的网络接口数量翻 4-8 倍，光模块用量、网卡用量、交换机端口数全部跟着乘 4-8 倍。光模块四厂（中际旭创 300308.SZ / 新易盛 300502.SZ / Coherent COHR / Lumentum LITE）的产能从 2023 到 2025 年增长 5-10 倍，背后的物理需求就是这一层。
 
@@ -121,7 +121,7 @@ GB200 NVL72 是单一物理机柜内 72 颗 Blackwell GPU 共享 NVLink 5 域的
 18 链路 × 50 GB/s 单向 × 2（双向）= 1,800 GB/s = 1.8 TB/s
 ```
 
-72 颗 GPU 在域内的 aggregate bandwidth：
+72 颗 GPU 在域内的聚合带宽：
 
 ```
 72 × 1.8 TB/s / 2 = 64.8 TB/s（bisection，对分带宽：把网络切成两半后两半之间的最大可用带宽；机柜级 bisection 带宽业内估算 64.8 TB/s）
@@ -303,7 +303,7 @@ flowchart LR
 
 NVDA 网络层抽税 ≈ NVDA GPU 抽税的 1/4 量级，这个数字结构是前一章五税的横向佐证。
 
-### InfiniBand 在企业级 / HPC 之外的应用：被低估的 niche
+### InfiniBand 在企业级 / HPC 之外的应用：被低估的细分市场
 
 第 7 章把 InfiniBand 作为五税之一时主要看的是 AI 训练集群。本节补一个被市场关注度更低的角度——**InfiniBand 在企业级 HPC 与超算上的 30 年积累**。InfiniBand 标准最早在 1999 年由 Compaq / IBM / HP / 英特尔 / Microsoft / Sun 等业内联盟推出，原本是为了取代 PCI 总线作为下一代服务器内 / 间互连协议。Mellanox 是 1999 年成立的以色列公司，是 InfiniBand 阵营里少数活下来的玩家——Mellanox 在 2000-2010 这十年靠 HPC 超算（Top500 超算排行榜里业内估算 70%+ 使用 InfiniBand 互连）+ 金融行业低延迟交易（每微秒延迟差对应几百万美元利润差异）这两个垂直市场存活。
 
@@ -511,7 +511,7 @@ ANET 在 AI 网络市场的位置是标准化以太网 + 高端整机服务。�
 
 这三条路径指向同一个事实：**无论以太网阵营走哪条路径，博通都在底层吃 ASIC 芯片的高毛利**。Spectrum-X 是 NVDA 的以太网防线，Arista 整机里博通 Tomahawk 芯片仍是上游，白盒交换机里博通直接吃芯片毛利。博通在以太网阵营这一层是路径中立的——客户走任何路径它都赚芯片钱。这是 §8.4 那条判断（博通是除 NVDA 外最大的单一赢家）的物理根。
 
-## 8.6 Astera Labs 与 PCIe retimer：隐形 niche 的高毛利
+## 8.6 Astera Labs 与 PCIe retimer：隐形细分环节的高毛利
 
 Astera Labs（ALAB，PCIe / CXL 互连芯片新锐，2017 年成立于美国硅谷，2024-03 在 Nasdaq 上市）是 AI 网络这一层里被市场关注度最低的一档玩家。ALAB FY25 营收 \$852.5M、GAAP 毛利率 75.69%、营业利润率 20.34%、净利润 \$219.1M。这家公司体量比 AVGO 小两个量级，但 75.69% GAAP 毛利率是整条 AI 算力链上最高的几个数字之一（参考对比：NVDA FY26 GAAP 毛利率 71.07%，AVGO FY25 GAAP 毛利率 67.77%）。
 
@@ -529,7 +529,7 @@ flowchart LR
 
 **图 8-8：PCIe retimer 在服务器主板上的物理位置——CPU 与 GPU 之间长走线的信号中继站**
 
-每张英伟达 GPU 加速卡（H100 / H200 / B200 / GB200）的服务器板上业内估算需要 1-2 颗 PCIe Gen5 retimer。Astera Labs 在这个 niche 市场里业内估算占 60%+ 份额（业内估算综合 SemiAnalysis 2024-2025 + Crehan Research 互连芯片市占跟踪，ALAB 不分品类披露 retimer 单品市占）。其他玩家是 Montage Technology（中国，澜起科技 688008.SS）、Microchip Technology、Texas Instruments，但份额都远低于 ALAB。
+每张英伟达 GPU 加速卡（H100 / H200 / B200 / GB200）的服务器板上业内估算需要 1-2 颗 PCIe Gen5 retimer。Astera Labs 在这个细分市场里业内估算占 60%+ 份额（业内估算综合 SemiAnalysis 2024-2025 + Crehan Research 互连芯片市占跟踪，ALAB 不分品类披露 retimer 单品市占）。其他玩家是 Montage Technology（中国，澜起科技 688008.SS）、Microchip Technology、Texas Instruments，但份额都远低于 ALAB。
 
 ### 隐形抽税机制
 
@@ -579,9 +579,9 @@ ALAB FY25 的几个关键数字组合：
 
 **关注点 1：客户集中度**。ALAB 在 S-1 中披露过 2023 / 2024 年前 3 客户占营收 50%+。这种集中度对 ALAB 的议价权与营收稳定性都是双面风险——前 3 客户是超大规模云厂（业内估算含 Microsoft / AWS / Meta），任何一家换供应商或自研 retimer 都会对 ALAB 营收冲击 10-20%。
 
-**关注点 2：技术替代品 / 协议变迁的风险**。PCIe retimer 这个 niche 的核心价值是标准 PCIe 信号完整性问题的硬件补丁。如果未来 GPU / CPU 间互连从 PCIe 切到 NVLink / UALink / 直接光互连，retimer 这个赛道会从刚需变成备份。这件事在 2026-2030 年的可能性业内估算偏低（PCIe Gen5 / Gen6 仍是主流），但 2030 之后的趋势是真实风险。
+**关注点 2：技术替代品 / 协议变迁的风险**。PCIe retimer 这个细分环节的核心价值是标准 PCIe 信号完整性问题的硬件补丁。如果未来 GPU / CPU 间互连从 PCIe 切到 NVLink / UALink / 直接光互连，retimer 这个赛道会从刚需变成备份。这件事在 2026-2030 年的可能性业内估算偏低（PCIe Gen5 / Gen6 仍是主流），但 2030 之后的趋势是真实风险。
 
-ALAB 是本章网络层多个 niche 高毛利玩家的典型——这一类玩家在 AI 算力链上的单一影响力小，但加总起来构成 NVDA + AVGO 之外的长尾高毛利供应商池。
+ALAB 是本章网络层多个细分市场高毛利玩家的典型——这一类玩家在 AI 算力链上的单一影响力小，但加总起来构成 NVDA + AVGO 之外的长尾高毛利供应商池。
 
 ### Astera Labs 与 PCIe 标准演进的协同节奏
 
@@ -604,7 +604,7 @@ ALAB 在 2024-2025 推出的 Scorpio fabric switch 产品线是一个值得单�
 
 Scorpio fabric switch 的物理形态是把多颗 PCIe Gen5 / Gen6 retimer + switch 集成在单一 ASIC 里，可以做 GPU-to-GPU PCIe fabric（绕过 CPU 做 GPU 间直接 PCIe 互连）+ GPU-to-Memory CXL fabric（让 GPU 通过 CXL 访问远端内存池）。这一类产品在 AI 推理集群（不像训练那样需要 NVLink scale-up 域，但需要高带宽 / 低延迟 GPU-memory 互连）里有明确价值——业内估算 Scorpio 产品线 2026-2027 营收弹性 50%+。
 
-ALAB 在 niche 市场之外的扩展节奏值得跟踪：**从 retimer 单品扩到 PCIe / CXL fabric 整体方案是一次商业模型的层级跃迁**——单品厂家变成系统级供应商。如果 Scorpio 在 2026-2028 内拿到超大规模云厂大客户的设计 win，ALAB 在 AI 算力链上的位置可能从网络层 niche 上升到网络层主要玩家。这件事的监测指标是 ALAB 每季财报电话会里 Scorpio 业务进展披露 + 季度新增客户披露。
+ALAB 在细分市场之外的扩展节奏值得跟踪：**从 retimer 单品扩到 PCIe / CXL fabric 整体方案是一次商业模型的层级跃迁**——单品厂家变成系统级供应商。如果 Scorpio 在 2026-2028 内拿到超大规模云厂大客户的设计导入（design win），ALAB 在 AI 算力链上的位置可能从网络层细分环节上升到网络层主要玩家。这件事的监测指标是 ALAB 每季财报电话会里 Scorpio 业务进展披露 + 季度新增客户披露。
 
 ## 8.7 光模块周期：800G → 1.6T 切换的赢家与节奏
 
@@ -743,7 +743,7 @@ AI 算力链上的标准之争截至 2026-05 处于这条路径的早中期：
 | scale-up | NVLink（NVDA）| UALink（AMD + 博通 + 联盟）| 私有标准主导，开放标准 2026-2027 量产 |
 | scale-out（高性能）| InfiniBand（NVDA Mellanox）| 以太网 + RoCEv2（IEEE / IETF）| 双轨并行，私有标准在高性能领域主导 |
 | scale-out（通用）| Spectrum-X（NVDA）| 以太网白盒 + 博通 | 双轨并行，开放标准在大众市场主导 |
-| 域内总线 | NVLink-C2C（NVDA Grace-Hopper）| CXL（业内联盟）| 私有标准主导高端，CXL 在 AI 推理 niche 渗透 |
+| 域内总线 | NVLink-C2C（NVDA Grace-Hopper）| CXL（业内联盟）| 私有标准主导高端，CXL 在 AI 推理细分场景渗透 |
 | GPU 加速卡互连 | PCIe Gen5 / Gen6（业内标准）| 同左 | 开放标准主导 |
 
 > 来源：业内综合各互连标准的公开技术披露与业内联盟成员名单。

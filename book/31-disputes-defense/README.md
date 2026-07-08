@@ -7,7 +7,7 @@ theoretical_anchor: "Popper 可证伪性 / Soros 反身性 / Kahneman 启发式�
 data_cutoff: "2026-06"
 disclaimer: chapter
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/PmfywzgrliNenFkBUuOc1kUHnpg"
-last_synced: "2026-06-30T02:12:06+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -401,7 +401,7 @@ ASIC 会在 2027 年底前蚕食 NVDA 加速器市占率 10-20 个百分点（�
 
 > RLHF：Reinforcement Learning from Human Feedback，基于人类反馈的强化学习，用于对齐模型输出与人类偏好的后训练阶段。
 - **条件 B（绑定关系破裂或弱化）**：Anthropic 1M TPU 大单和 AWS Project Rainier 不能继续作为「投资捆绑型大单」（Google 投 Anthropic \$40B、AWS 投 Anthropic \$8B），需要出现至少 1 家非绑定型大客户（如 OpenAI / xAI / Mistral / Cohere 任一）在 ASIC 上做主力训练 + 推理。
-- **条件 C（TCO 真实反转）**：在 ML Perf 或类似公开 benchmark 上，TPU / Trainium 在长序列推理 + RLHF 训练两类典型工作负载上，每 token TCO < NVDA H200 / B200 同等工作负载 30% 以上，并持续 2 年。
+- **条件 C（TCO 真实反转）**：在 ML Perf 或类似公开基准测试上，TPU / Trainium 在长序列推理 + RLHF 训练两类典型工作负载上，每 token TCO < NVDA H200 / B200 同等工作负载 30% 以上，并持续 2 年。
 
 **如果三条件全部成立——ASIC 真撼动 NVDA**。如果只有 A + B 成立（C 不成立）——NVDA 数据中心毛利率从 75% 压到 60-65%，但份额不会丢太多。如果只有 C 成立（A、B 不成立）——是被特定大客户内部消化、不外溢。
 
@@ -419,7 +419,7 @@ ASIC 会在 2027 年底前蚕食 NVDA 加速器市占率 10-20 个百分点（�
 
 **判断「三条件下三种路径」证伪触发器**：
 
-**触发器 C**：ML Perf 2027 年公开榜单中，TPU 或 Trainium 在长序列推理 + RLHF 训练两类典型工作负载上 TCO 优势 > 30%，且这一优势在三个不同 benchmark 上一致出现。监测来源：MLCommons MLPerf 季度榜单。
+**触发器 C**：ML Perf 2027 年公开榜单中，TPU 或 Trainium 在长序列推理 + RLHF 训练两类典型工作负载上 TCO 优势 > 30%，且这一优势在三个不同基准测试上一致出现。监测来源：MLCommons MLPerf 季度榜单。
 
 **触发器 A + B 同时出现持续两个季度——本书在议题 4 的位置错误，需修正为「ASIC 已实质性撼动 NVDA」**。
 
@@ -795,7 +795,7 @@ NVDA 客户集中度反身性数据：
 
 ### 段一：议题精确表述
 
-CoreWeave 上市后 Q3 2025 营收 \$1,365M、调整后 EBITDA \$838M（61% margin）、GAAP 净亏损 \$110M、Revenue Backlog \$55.6B、总债务 \$14B。议题：在折旧政策（6 年 vs 3 年）、客户集中度（MSFT / OpenAI 占合同储备 50%+）、H100/H200 二手价（\$2/hr → \$1/hr）三个变量下，一级 GPU 云（CoreWeave / Crusoe / Lambda / Nebius / Together）估值是否合理？
+CoreWeave 上市后 Q3 2025 营收 \$1,365M、调整后 EBITDA \$838M（61% margin）、GAAP 净亏损 \$110M、在手订单（Revenue Backlog）\$55.6B、总债务 \$14B。议题：在折旧政策（6 年 vs 3 年）、客户集中度（MSFT / OpenAI 占合同储备 50%+）、H100/H200 二手价（\$2/hr → \$1/hr）三个变量下，一级 GPU 云（CoreWeave / Crusoe / Lambda / Nebius / Together）估值是否合理？
 
 ### 段二：乐观派代表观点 + 一手 URL
 
@@ -911,7 +911,7 @@ H20 / 出口管制效果的本书判断分四种情景：
 
 本书倾向场景 A（基线判断）+ 部分场景 D（每次管制升级有 6-12 个月时差效应）。理由：
 
-- 中国 AI 真实差距是「HBM + 先进封装 + EDA + 算法 know-how」四件套，单独看 Ascend 性能差距正在缩小但其他三个不会；
+- 中国 AI 真实差距是「HBM + 先进封装 + EDA + 算法技术诀窍」四件套，单独看 Ascend 性能差距正在缩小但其他三个不会；
 - 这会导致中国 AI 在「应用层 + 推理」会接近美国，但在「前沿训练」仍落后 12-24 个月；
 - 反共识：禁运的真正赢家是华为 + 中芯国际 + CXMT + 国产 EDA 公司，输家是 NVDA 中国营收 + 中国前沿训练能力。
 
@@ -923,7 +923,7 @@ H20 / 出口管制效果的本书判断分四种情景：
 
 **触发器 A（场景 B 兑现侧）**：NVDA 中国数据中心营收 2028 年底前回升到 \$10B/年以上，且华为 Ascend 出货 < 800K/年。监测来源：NVDA 季度 10-K 地域分部 + SemiAnalysis / Bernstein 季度 Ascend 跟踪。
 
-**触发器 B（场景 C 兑现侧）**：中国 lab（DeepSeek / Qwen / Kimi / 字节豆包）在 2027 年底前公开训练 frontier-class 模型（即在 GPQA Diamond / SWE-Bench / 类似硬 benchmark 上达到 GPT-5 / Claude 4 同等水平），且 100% 用国产芯片完成。监测来源：lab 论文 + benchmark 公开榜单（HuggingFace / Artificial Analysis）。
+**触发器 B（场景 C 兑现侧）**：中国 lab（DeepSeek / Qwen / Kimi / 字节豆包）在 2027 年底前公开训练 frontier-class 模型（即在 GPQA Diamond / SWE-Bench / 类似硬基准测试上达到 GPT-5 / Claude 4 同等水平），且 100% 用国产芯片完成。监测来源：lab 论文 + 评测公开榜单（HuggingFace / Artificial Analysis）。
 
 **触发器 C（场景 D 强化侧）**：BIS 在 2027-2028 任一年新增对中国出口管制 > 3 次（即半年级升级），且每次升级被中国采购 reroute（如经第三国转运）化解。监测来源：BIS Federal Register + 中国海关进口数据。
 
@@ -1033,7 +1033,7 @@ timeline
 
 | 议题 | 表态 | Y 阈值（数值 + 时间窗 + 监测来源） |
 |---|---|---|
-| 4. ASIC 撼动 NVDA | 三条件式（A 软件生态 + B 非绑定大客户 + C TCO 反转） | Y1: NVDA 数据中心市占率 < 65% 持续 2 季度（TrendForce/Counterpoint/Bernstein 加权口径，2027 底前）；Y2: 非绑定型大客户单笔 > \$5B 迁移到 ASIC（2027 底前）；Y3: ML Perf 2027 榜单 TCO 优势 > 30% 三 benchmark 一致 |
+| 4. ASIC 撼动 NVDA | 三条件式（A 软件生态 + B 非绑定大客户 + C TCO 反转） | Y1: NVDA 数据中心市占率 < 65% 持续 2 季度（TrendForce/Counterpoint/Bernstein 加权口径，2027 底前）；Y2: 非绑定型大客户单笔 > \$5B 迁移到 ASIC（2027 底前）；Y3: ML Perf 2027 榜单 TCO 优势 > 30% 三个基准测试一致 |
 | 5. 训推比例 | 四场景式（A McKinsey 1:2 推理主导 / B Epoch 1:1 均衡 / C 训练主导 / D 推理 1:10 碾压） | Y1: 头部 lab 公开披露年度推理:训练 > 3:1 持续 2 季度（2028 底前）；Y2: 头部 lab 单次训练 > 4GW 持续 30 天 + 训练占年度算力 > 60%（2028 底前） |
 | 9. NVDA 估值 | base/bull/bear 三套 + 客户集中度反身性 | Y1 Bull: NVDA 2028 数据中心营收 > \$400B + 毛利率 > 70%；Y2 Base: 营收 \$250-350B + 毛利率 65-70%；Y3 Bear: 营收 < \$250B 或毛利率 < 60%；Y4 反身性: Mag7 任一家 ASIC 占算力 50%+ 或调降 NVDA 采购 20%+（2027 底前） |
 | 10. 一级 GPU 云估值 | 四支撑条件式（折旧 / 利率 / 利用率 / 客户集中度） | Y1 Bull: CoreWeave Operating margin > 20% + 自由现金流 margin > 10%（2028 底前）；Y2 Bear: GAAP 净亏损 > \$1B/季度持续两季或主动加速折旧；Y3: MSFT/OpenAI/META 任一家调减 30%+；Y4: H100 二手 < \$1/hr 持续 6 月 |
@@ -1079,7 +1079,7 @@ xychart-beta
 - 价格：Silicon Data H100 Rental Index 月度
 - 市占：TrendForce / Counterpoint / Bernstein 加权季度
 - 产能：台积电法说会 + TrendForce / SemiAnalysis 月度
-- 算力：Epoch AI 数据库 + lab 论文 + benchmark 榜单
+- 算力：Epoch AI 数据库 + lab 论文 + 评测榜单
 - 电力：PJM 容量市场 + EIA 月度 + CBRE / JLL 季度
 - 核电：NRC SMR Licensing Status + Nuclear Energy Institute
 - 中国：SemiAnalysis / Bernstein 季度 Ascend 跟踪 + 国家信息中心年度

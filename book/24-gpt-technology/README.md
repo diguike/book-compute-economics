@@ -7,7 +7,7 @@ theoretical_anchor: "GPT 三判据（Bresnahan-Trajtenberg 1995）/ 大宗商品
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/Mdppw3KIKiMtLek9yJTcvFe4nqb"
-last_synced: "2026-06-30T02:05:45+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -170,7 +170,7 @@ David 论文的方法论——把当前 GPT 的扩散位置与历史 GPT 的扩�
 
 证据 A：硬件层 FLOPS/\$ 曲线。Epoch AI 给出 2010-2025 年 GPU FLOPS/\$ 年化降幅约 30%。这条曲线已经延续了 15 年，且 Hopper（2022）→ Blackwell（2024）→ Rubin（2026 路线图，业内估算）显示斜率未变。
 
-证据 B：单位 token 推理价格曲线。GPT-4（2023-03）\$30 input / \$60 output per 1M tokens；GPT-4o（2024-05）\$5 / \$15；GPT-4o mini（2024-07）\$0.15 / \$0.60；GPT-5（2025）\$1.25 / \$10；DeepSeek-V3（2024-12）\$0.27 / \$1.10。同等能力档（按 MMLU benchmark 对齐）的 input 单价 2023-2026 累计跌幅超过 200 倍，年化降幅 ~70%。这条曲线比 ICT 的摩尔定律陡得多。
+证据 B：单位 token 推理价格曲线。GPT-4（2023-03）\$30 input / \$60 output per 1M tokens；GPT-4o（2024-05）\$5 / \$15；GPT-4o mini（2024-07）\$0.15 / \$0.60；GPT-5（2025）\$1.25 / \$10；DeepSeek-V3（2024-12）\$0.27 / \$1.10。同等能力档（按 MMLU 基准测试对齐）的 input 单价 2023-2026 累计跌幅超过 200 倍，年化降幅 ~70%。这条曲线比 ICT 的摩尔定律陡得多。
 
 证据 C：算法效率改进。Epoch AI 单独跟踪算法效率（per-FLOP 模型能力）每 8-9 个月翻一倍，年化效率提升 ~2.5×。算法效率改进与硬件效率改进相乘，单位模型能力的 token 价格年化降幅在 2023-2026 区间内是历史 GPT 任一时段最陡的。
 

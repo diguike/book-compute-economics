@@ -13,7 +13,7 @@ primary_data_sources:
   - "Crusoe 项目融资 8-K + 私募信息"
   - "S&P / Moody's 评级报告（CoreWeave / Digital Realty / Equinix）"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/ZnefwNN81iPZhekSVpvcbtYznSg"
-last_synced: "2026-06-30T01:54:48+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -402,7 +402,7 @@ CoreWeave Q3 2025 是观察转租模式最干净的样本：
 - GAAP Operating income \$51.9M（margin 3.8%）
 - Interest expense \$310.6M
 - GAAP 净亏损 \$110.1M
-- Revenue Backlog \$55.6B
+- 在手订单 \$55.6B
 
 61% EBITDA + 3.8% Operating margin + GAAP 净亏损 + 短期债务 \$3.71B（流动负债合计 \$9.71B）这五个数字摆在同一张表上，是 CoreWeave 商业模型的全部画像。
 
@@ -496,7 +496,7 @@ Crusoe 在第 16 章详细分析时会作为四种 GPU 云亚型中的一种单�
 
 ### 4.7 转租模式的估值锚
 
-转租模式的估值锚是 **EV/EBITDA + Backlog × 折旧期假设 × 客户集中度敏感性**。
+转租模式的估值锚是 **EV/EBITDA + 在手订单 × 折旧期假设 × 客户集中度敏感性**。
 
 CoreWeave 当前 EV/EBITDA 业内综合估算 ~10-12× forward（按 2026E EBITDA ~\$3.5-4B 估算），跟传统云服务商 AWS / Azure 的 EV/EBITDA 倍数比偏低（超大规模云厂综合 15-20×），但跟 SaaS 行业典型成长股比偏高。
 

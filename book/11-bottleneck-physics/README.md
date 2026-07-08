@@ -7,7 +7,7 @@ theoretical_anchor: "产能弹性的不对称（Lazonick）/ 客户认证准入�
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/WEqnwMXiMiwCeOkqlvmc87denSf"
-last_synced: "2026-06-30T01:47:25+08:00"
+last_synced: "2026-07-08T21:31:49+08:00"
 status: finalized
 ---
 
@@ -34,7 +34,7 @@ status: finalized
 
 ```mermaid
 graph TD
-    A[GPU 订单 NVDA Backlog 90B+] --> B[CoWoS 产能<br/>2024 末 35K → 2026 末 130K]
+    A[GPU 订单 NVDA 在手订单 90B+] --> B[CoWoS 产能<br/>2024 末 35K → 2026 末 130K]
     A --> C[HBM 产能<br/>三家联合产能 250K+ 晶圆/月]
 
     B --> B1[良率约束<br/>CoWoS-L 50% → 80% 用 2 年]
