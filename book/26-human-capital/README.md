@@ -7,7 +7,7 @@ theoretical_anchor: "Goldin-Katz 技能溢价 / Acemoglu-Restrepo 任务导向�
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/EUX4wx2qLiSKNTk9im6cXfVhnoh"
-last_synced: "2026-07-08T21:31:49+08:00"
+last_synced: "2026-08-18T20:58:14+08:00"
 status: finalized
 ---
 
@@ -22,7 +22,7 @@ status: finalized
 
 从金融读者的视角，TFP 增长 0.265pp / 年是标普 500 长期 EPS 增速可以多出几分之一的事情；从 AI 工程师的视角，TFP 增长 0.265pp / 年是我组里那个 5 年经验的工程师还有没有岗位的事情。两个视角对同一个数字的关切不同，但都绕不开同一个问题——**AI 在劳动力市场内部的分布是不均匀的**。
 
-本章把这个分布问题拆开。理论锚点用两套：第一套是 Acemoglu-Restrepo 的任务导向框架，把 AI 对劳动需求的影响拆成两条曲线——**displacement effect（替代效应）**与 **reinstatement effect（重置效应）**，新任务的创造速度与旧任务的替代速度赛跑，决定劳动总需求方向；第二套是 Goldin-Katz 的教育与技术赛跑框架，把工资分配看成技能供给与技能需求两条曲线的赛跑，决定大学工资溢价（college wage premium）方向。两套框架的共同点是：**AI 的影响不能直接读为取代多少岗位，要拆成哪些任务被替代、哪些任务被增强、哪些任务被新创造三层**。
+下面把这个分布问题拆开。理论框架用两套：第一套是 Acemoglu-Restrepo 的任务导向框架，把 AI 对劳动需求的影响拆成两条曲线——**displacement effect（替代效应）**与 **reinstatement effect（重置效应）**，新任务的创造速度与旧任务的替代速度赛跑，决定劳动总需求方向；第二套是 Goldin-Katz 的教育与技术赛跑框架，把工资分配看成技能供给与技能需求两条曲线的赛跑，决定大学工资溢价（college wage premium）方向。两套框架的共同点是：**AI 的影响不能直接读为取代多少岗位，要拆成哪些任务被替代、哪些任务被增强、哪些任务被新创造三层**。
 
 把这个三层任务级别分解画成一张图——任务谱（task spectrum）上的每一个任务，都会被 AI 按 automation / augmentation / displacement 三个机制中的某一个处理，三机制的份额加总等于 100%：
 
@@ -89,7 +89,7 @@ graph TD
 
 Acemoglu 的判断方向是悲观的——AI 会加剧不平等，需要再分配政策介入。这个判断与 Brynjolfsson-Li-Raymond 2023 客服实验的发现方向相反：5179 名客服人员的对照实验中，新员工 / 低技能员工的生产力提升 +34%，资深员工提升接近 0——AI 把行业内技能溢价压缩。两位作者的判断方向是乐观的——AI 让低技能群体相对获益。
 
-两位经济学家对同一组现象给出方向相反的判断。本章不站队，本章把两位的判断都列出来，等 2027-2030 年数据再回看。但本章倾向于一个折中立场：**AI 对行业内技能溢价是压缩的（Brynjolfsson 方向），AI 对跨行业 / 跨职业的工资分布是放大的（Acemoglu 方向）**。这两个方向不矛盾——行业内压缩与行业间放大可以同时发生。第 26.9 节回到这个判断。
+两位经济学家对同一组现象给出了方向相反的判断。这里不站队，把两位的判断都列出来，等 2027-2030 年数据再回看。但本章倾向于一个折中立场：**AI 对行业内技能溢价是压缩的（Brynjolfsson 方向），AI 对跨行业 / 跨职业的工资分布是放大的（Acemoglu 方向）**。这两个方向不矛盾——行业内压缩与行业间放大可以同时发生。第 26.9 节回到这个判断。
 
 **Goldin-Katz 的供需赛跑框架**。Goldin 与 Katz 在 *The Race Between Education and Technology*（Harvard University Press 2008，下称 G-K 2008）里把美国 20 世纪的工资分布演变压缩成一句话：**大学工资溢价是技能供给与技能需求两条曲线赛跑的结果**——当大学毕业生供给增速跟不上技能偏向型技术进步（skill-biased technical change）的需求增速，大学工资溢价上升；反之下降。G-K 2008 用百年数据拼出这张图：
 
@@ -114,7 +114,7 @@ G-K 框架的关键洞察是：**大学工资溢价不是技术决定的，是�
 | augmentation（增强）| AI 辅助任务，劳动产出上升 | 任务仍由 labor 完成，但 labor 配 AI 工具 | 岗位数量变化方向不确定，单产上升 | productivity effect |
 | displacement（位移）| 劳动力在岗位 / 行业间流动 | 任务被替代后劳动力转向其他任务 | 行业 / 职业间劳动力再分配 | displacement + reinstatement 合并效果 |
 
-> 本章 displacement 一词专指劳动力在岗位间流动的中间形态，与 Acemoglu-Restrepo 原文 displacement effect（劳动需求下降）不完全等价。Acemoglu 原文的 displacement effect 在本章对应 automation 机制的主要部分；本章 displacement 一词更接近 Autor 2019 论文里的 occupational reallocation。
+> 本书说的「岗位置换」专指劳动力在岗位之间流动的中间形态，与 Acemoglu-Restrepo 原文的 displacement effect（劳动需求下降）不完全等价。Acemoglu 原文的 displacement effect 在本章对应 automation 机制的主要部分；本章 displacement 一词更接近 Autor 2019 论文里的 occupational reallocation。
 
 这三个机制的份额加总等于 100%——一个职业每被 AI 影响一个任务，要么被自动化（automation）、要么被增强（augmentation）、要么劳动力流出该职业（displacement）。本章的方法是对每个职业逐任务做三机制分配，再加总成职业级别的机制份额。
 
@@ -186,7 +186,7 @@ xychart-beta
 
 把这三组数据综合到任务级别的三机制分配：
 
-| 程序员任务 | 任务时间占比（业内估算）| automation 份额 | augmentation 份额 | displacement 份额 |
+| 程序员任务 | 任务时间占比| automation 份额 | augmentation 份额 | displacement 份额 |
 |---|---:|---:|---:|---:|
 | 编码（代码生成）| 25% | 15% | 80% | 5% |
 | Debug / 故障排查 | 20% | 5% | 75% | 20% |
@@ -277,7 +277,7 @@ AI 对教师行业的影响有两个层面：
 
 第二层是**课堂外** + **行政事务**——Khan Academy 与 OpenAI 合作的 Khanmigo（2023-05 上线）、Duolingo 的 AI 辅导功能（2023-03 上线）等家庭辅导 / 自学场景的 AI 渗透率上升，可能挤压课外辅导市场。同时 AI 辅助的教学行政（出题、批改、备课、个性化学习计划）让教师的非教学时间成本下降——但这部分时间节省是否能让教师数量下降，取决于教师工会与监管的博弈。
 
-教师的三机制份额（简略版）：30% automation + 60% augmentation + 10% displacement。automation 主要落在行政事务（出题、批改、备课），augmentation 落在个性化教学辅助，displacement 占比小是因为教师岗位的监管刚性。本章对教师行业的判断方向：**AI 不会显著替代教师岗位，但教师的工作内容会向个性化辅导 + 课堂管理 + 评估设计重组**。
+教师这个岗位的三种机制份额大致是：30% 被自动化、60% 被增强、10% 被置换。自动化主要落在行政事务（出题、批改、备课），augmentation 落在个性化教学辅助，displacement 占比小是因为教师岗位的监管刚性。本章对教师行业的判断方向：**AI 不会显著替代教师岗位，但教师的工作内容会向个性化辅导 + 课堂管理 + 评估设计重组**。
 
 **护士：短缺市场，AI 影响信号弱**。注册护士（SOC 29-1141）2024 年就业 3,300K，中位年薪 \$86,070。2020-2024 就业 +6.5% / 名义工资 +22.0%（7 职业中最高）/ 实际工资 -0.3%（剔除 CPI 累计 22.3%，接近持平）——这是 7 个职业里名义工资增速最强、实际工资跌幅最小的代表之一。原因是美国护士市场长期短缺，AI 替代护士的成本远高于解决短缺问题的成本。
 
@@ -385,21 +385,21 @@ timeline
 | 维度 | 电气化（马车夫 → 汽车产业）| IT（打字员 → 信息技术）| AI（？→ ？）|
 |---|---|---|---|
 | 主要替代职业 | 马车夫 / 马夫 / 马蹄铁匠 | 打字员 / 文秘 / 数据录入 | 客服 / 翻译员 / 初级律师助理 / 初级文案 |
-| 替代规模（峰值占就业比）| 5-6% | 3-4% | 业内估算 2-4% |
+| 替代规模（峰值占就业比）| 5-6% | 3-4% | 2-4% |
 | 主要 reinstatement 职业 | 汽车整车厂 / 修理 / 加油站 | 程序员 / 系统管理员 / 数据库 / 网络 | prompt 工程师 / 数据标注师 / AI 安全研究员 / RAG 工程师 |
-| reinstatement 规模 | 远大于 displacement | 显著大于 displacement | 业内估算小于 displacement |
-| 替代周期长度 | 30 年（1900-1930）| 20 年（1980-2000）| 业内估算 10-20 年 |
-| transition cost 高低 | 高（个体难转型）| 中等 | 业内估算中等到高 |
+| reinstatement 规模 | 远大于 displacement | 显著大于 displacement | 小于 displacement |
+| 替代周期长度 | 30 年（1900-1930）| 20 年（1980-2000）| 10-20 年 |
+| transition cost 高低 | 高（个体难转型）| 中等 | 中等到高 |
 
 > 来源：电气化数据综合 US Census Historical Statistics + Field 2011 *A Great Leap Forward*；IT 数据综合 BLS SOC 历史数据 + Autor 2019 "Work of the Past, Work of the Future"。AI 列为本章估算。
 
 这张表的关键观察是 **reinstatement 规模**——电气化与 IT 两轮 GPT（General Purpose Technology，通用目的技术）的 reinstatement 规模都远大于 displacement 规模，但 AI 的 reinstatement 规模业内估算可能小于 displacement 规模。这是 Acemoglu 2024 论文里悲观判断的核心——AI 创造的新岗位（prompt 工程师、数据标注师、AI 安全研究员）的总规模远小于被替代的岗位规模。
 
-**全球 AI 数据标注产业链**。AI 数据标注是 reinstatement effect 创造的新职业之一。Scale AI（2016 年成立，2025 年 Meta 入股 49% 时估值约 \$14.3B；来源：Scale AI 公开融资公告 + Reuters / Bloomberg 2025-06 报道）+ Surge AI（2020 年成立，业内估算估值 \$5-10B）+ Labelbox + Snorkel AI 等公司构成的数据标注产业链规模业内估算约 \$5-8B 年收入（2025 年），全球数据标注劳动者总数业内估算 500K-800K 人。
+**全球 AI 数据标注产业链**。AI 数据标注是 reinstatement effect 创造的新职业之一。Scale AI（2016 年成立，2025 年 Meta 入股 49% 时估值约 \$14.3B；来源：Scale AI 公开融资公告 + Reuters / Bloomberg 2025-06 报道）+ Surge AI（2020 年成立，业内估算估值 \$5-10B）+ Labelbox + Snorkel AI 等公司构成的数据标注产业链规模约 \$5-8B 年收入（2025 年），全球数据标注劳动者总数500K-800K 人。
 
 数据标注产业链的地理分布呈现明显的南方国家特征。多家媒体调查（Time、NYT、The Guardian 2023-2024 系列）+ 学术调研（Fairwork Foundation 2024 年报）显示：
 
-| 地区 | 主要标注业务 | 标注师工资（每小时美元）| 业内估算劳动力规模 |
+| 地区 | 主要标注业务 | 标注师工资（每小时美元）| 劳动力规模 |
 |---|---|---|---|
 | 美国（科技中心）| 高敏感数据标注 / RLHF / 红队 | \$15-25 | 50-100K |
 | 印度 | 通用 NLP 标注 + 视觉标注 | \$1-3 | 200-300K |
@@ -464,7 +464,7 @@ AI 时代的大学工资溢价走向是第 26 章与第 25 章共同的开放问
 
 ## 26.11 主张方向 + 可证伪条件
 
-把前面 10 节的判断收紧成本章对核心争议的方向判断。
+把前面十节的判断收紧成一个方向判断。
 
 **两个方向判断**：
 

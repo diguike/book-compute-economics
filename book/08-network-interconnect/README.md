@@ -7,7 +7,7 @@ theoretical_anchor: "互联标准之争 / De facto standard"
 data_cutoff: "2026-06"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/UGA1wKg0KiFoyDk4MM1cEfNBnVd"
-last_synced: "2026-07-08T21:31:49+08:00"
+last_synced: "2026-08-18T20:54:55+08:00"
 status: finalized
 ---
 
@@ -71,11 +71,11 @@ graph TB
 
 三层网络的玩家分布与毛利结构差异极大：
 
-| 层级 | 物理边界 | 单卡带宽量级 | 主导厂家 | 协议 / 标准 | 业内估算毛利率 |
+| 层级 | 物理边界 | 单卡带宽量级 | 主导厂家 | 协议 / 标准 | 毛利率 |
 |------|---------|------------|---------|------------|--------------|
 | scale-up | 机柜内（72 GPU）| 单 GPU 1.8 TB/s | 英伟达（NVLink 5 + NVSwitch）| NVLink 私有 | ~70%（NVDA 内部口径）|
-| scale-out | 跨机柜跨域（8K-100K 卡）| 单卡 200-400 GB/s（多端口聚合）| 英伟达 InfiniBand + Spectrum-X / 博通 Tomahawk + Jericho / Arista | InfiniBand / 以太网 + RoCEv2 | 60-75%（业内估算）|
-| front-end / storage | 集群外（客户访问 + 存储）| 单端口 100-800 Gb/s | Arista / 思科（Cisco） / 中际旭创等光模块 | 标准以太网 | 50-65%（业内估算）|
+| scale-out | 跨机柜跨域（8K-100K 卡）| 单卡 200-400 GB/s（多端口聚合）| 英伟达 InfiniBand + Spectrum-X / 博通 Tomahawk + Jericho / Arista | InfiniBand / 以太网 + RoCEv2 | 60-75%|
+| front-end / storage | 集群外（客户访问 + 存储）| 单端口 100-800 Gb/s | Arista / 思科（Cisco） / 中际旭创等光模块 | 标准以太网 | 50-65%|
 
 > 来源：scale-up 数据来自英伟达 GB200 NVL72 产品页一手；scale-out / front-end 数据综合 AVGO FY25 业绩、ANET FY25 10-K、Mellanox 历史财务（NVDA 收购前）、SemiAnalysis 与戴尔（Dell）'Oro Group 2025 报告。各层毛利率为业内估算，三家主要玩家（英伟达、博通、Arista）均不分网络子产品披露毛利率。
 
@@ -95,13 +95,13 @@ xychart-beta
 
 把集群规模这个变量单独拉出来，可以看到一条非常清晰的拐点曲线。业内综合：
 
-| 集群规模 | 主流网络架构 | 主流互连协议 | 业内估算单卡网络成本 BOM 占比 |
+| 集群规模 | 主流网络架构 | 主流互连协议 | 单卡网络成本 BOM 占比 |
 |---------|-----------|------------|-----------------------------|
-| 1K-8K 卡（GPT-3 / GPT-4 训练量级）| 单层胖树 | InfiniBand HDR 200 Gb/s | 业内估算 6-8% |
-| 8K-32K 卡（Llama 3 / Claude 2 训练量级）| 双层胖树 | InfiniBand NDR 400 Gb/s | 业内估算 8-12% |
-| 32K-64K 卡（Llama 4 / Claude 3.5 训练量级）| 多平面轨道优化 | InfiniBand NDR 400 Gb/s 或以太网 800 Gb/s | 业内估算 10-14% |
-| 64K-100K 卡（Stargate 一期 / xAI Colossus 量级）| 多平面 + 跨数据中心路由 | 以太网 + Jericho 路由 / Spectrum-X | 业内估算 12-16% |
-| 100K+ 卡（2026-2028 主流前沿训练）| 跨数据中心 + 光纤直连 | 以太网 + 长距离光纤 + 可能 1.6T 光模块 | 业内估算 14-18% |
+| 1K-8K 卡（GPT-3 / GPT-4 训练量级）| 单层胖树 | InfiniBand HDR 200 Gb/s | 6-8% |
+| 8K-32K 卡（Llama 3 / Claude 2 训练量级）| 双层胖树 | InfiniBand NDR 400 Gb/s | 8-12% |
+| 32K-64K 卡（Llama 4 / Claude 3.5 训练量级）| 多平面轨道优化 | InfiniBand NDR 400 Gb/s 或以太网 800 Gb/s | 10-14% |
+| 64K-100K 卡（Stargate 一期 / xAI Colossus 量级）| 多平面 + 跨数据中心路由 | 以太网 + Jericho 路由 / Spectrum-X | 12-16% |
+| 100K+ 卡（2026-2028 主流前沿训练）| 跨数据中心 + 光纤直连 | 以太网 + 长距离光纤 + 可能 1.6T 光模块 | 14-18% |
 
 > 业内综合估算口径。各机构对网络成本占整卡 BOM 比例口径不一致——SemiAnalysis 把光模块 + 网卡 + 交换机一起算入 BOM，戴尔'Oro 只算交换机与路由器，本表取 SemiAnalysis 综合口径并扩展。
 
@@ -139,14 +139,14 @@ GB200 NVL72 是单一物理机柜内 72 颗 Blackwell GPU 共享 NVLink 5 域的
 
 NVLink 5 在 scale-up 这一层的替代方案是有限的，本章把所有主流替代方案列出来对比：
 
-| 互连协议 | 主导厂家 | 单 GPU 带宽 | 域大小（最大）| 跨厂家兼容 | 业内估算单卡链路成本 |
+| 互连协议 | 主导厂家 | 单 GPU 带宽 | 域大小（最大）| 跨厂家兼容 | 单卡链路成本 |
 |---------|---------|-----------|-------------|----------|------------------|
-| NVLink 5 | 英伟达 | 1.8 TB/s | 72 GPU（NVL72）| 否（英伟达专有）| 业内估算 ~\$2,000-3,000（NVSwitch 摊薄）|
-| Infinity Fabric XGMI | AMD | 业内估算 ~896 GB/s（MI355X）| 8-16 GPU | 否（AMD 专有）| 业内估算 ~\$1,500-2,000 |
-| ICI（Inter-Chip Interconnect）| Google | 业内估算 ~900 GB/s（TPU v5p / v6e）| 256-512 TPU（pod 级）| 否（Google 专有）| 不公开（自研，无外部售价）|
-| Neuron Link | AWS | 业内估算 ~400 GB/s（Trainium2）| 64 Trainium2 | 否（AWS 专有）| 不公开 |
+| NVLink 5 | 英伟达 | 1.8 TB/s | 72 GPU（NVL72）| 否（英伟达专有）| ~\$2,000-3,000（NVSwitch 摊薄）|
+| Infinity Fabric XGMI | AMD | ~896 GB/s（MI355X）| 8-16 GPU | 否（AMD 专有）| ~\$1,500-2,000 |
+| ICI（Inter-Chip Interconnect）| Google | ~900 GB/s（TPU v5p / v6e）| 256-512 TPU（pod 级）| 否（Google 专有）| 不公开（自研，无外部售价）|
+| Neuron Link | AWS | ~400 GB/s（Trainium2）| 64 Trainium2 | 否（AWS 专有）| 不公开 |
 | UALink | UALink Consortium（AMD / 英特尔 / 博通 / 思科 / HP / Meta / Google / Microsoft）| 路标 1.0 单 link 200 GB/s | 路标 1024 加速器 | 是（开放标准）| 不适用（1.0 规范 2026-04 发布，芯片尚未量产）|
-| InfiniBand NDR 400Gb | 英伟达 Mellanox | 单端口双向 100 GB/s（单向 50 GB/s）| 不限（理论）| 是 | 业内估算 ~\$1,500-2,500（端口 + 光模块）|
+| InfiniBand NDR 400Gb | 英伟达 Mellanox | 单端口双向 100 GB/s（单向 50 GB/s）| 不限（理论）| 是 | ~\$1,500-2,500（端口 + 光模块）|
 
 > 来源：NVLink 5 数据来自英伟达 GB200 NVL72 一手；AMD Infinity Fabric XGMI 数据综合 AMD MI300 / MI355X whitepaper + ServeTheHome 综合；Google TPU ICI 数据综合 Google Cloud TPU 文档；AWS Neuron Link 数据综合 AWS re:Invent 2024 发布会披露；UALink 数据综合 UALink Consortium 2024-10 标准发布公告 + AnandTech 2024-10 报道。各家私有协议单卡链路成本均属业内估算，三家厂均不单独披露 scale-up 互连模组成本。
 
@@ -190,8 +190,8 @@ timeline
 | NVLink 2 | 2017-Q3 | V100 | 6 | 25 GB/s | 300 GB/s | 8 GPU（DGX-2 可达 16 GPU）|
 | NVLink 3 | 2020-Q3 | A100 | 12 | 25 GB/s | 600 GB/s | 8 GPU（DGX A100）|
 | NVLink 4 | 2022-Q3 | H100 | 18 | 25 GB/s | 900 GB/s | 8 GPU（DGX H100）/ 256 GPU（NVLink Switch System，外销有限）|
-| NVLink 5 | 2024-Q4 | B200 / GB200 | 18 | 50 GB/s | 1,800 GB/s（1.8 TB/s）| 72 GPU（NVL72）/ 576 GPU（业内估算 NVL576 路标）|
-| NVLink 6（预测，整行为业内估算）| 2026-2027 | Rubin Ultra | 18+ | 100 GB/s | 3.6 TB/s | 576+ GPU |
+| NVLink 5 | 2024-Q4 | B200 / GB200 | 18 | 50 GB/s | 1,800 GB/s（1.8 TB/s）| 72 GPU（NVL72）/ 576 GPU（NVL576 路标）|
+| NVLink 6（预测，整行为）| 2026-2027 | Rubin Ultra | 18+ | 100 GB/s | 3.6 TB/s | 576+ GPU |
 
 > 来源：NVLink 1-4 数据综合英伟达各代 GPU whitepaper 一手 + Wikipedia NVLink 技术比对页一手核实；NVLink 5 数据来自英伟达 Blackwell whitepaper 2024-03 + GB200 NVL72 产品页一手；NVLink 6 数据综合英伟达 2024-03 GTC 路标披露 + Rubin 平台公开口径，业内估算 2027 量产。
 
@@ -219,7 +219,7 @@ UALink 的两个结构性挑战：
 
 **挑战 1：先发生态优势**。NVDA 在 NVLink 上有 8 年生态积累——NCCL 库、CUDA Graph API、各家超大规模云厂的训练框架（PyTorch / Megatron-LM / DeepSpeed）都对 NVLink 拓扑做了 8 年优化。UALink 在量产芯片出来之后还需要 12-24 个月才能让训练框架在 UALink 域上跑得跟 NVLink 同样高效。
 
-**挑战 2：AMD 的产品节奏**。UALink 阵营的事实主导者是 AMD，但 AMD 在数据中心 GPU 上的份额 2025 业内估算只占 5-10%（NVDA ~90%+）。UALink 的客户端主要寄希望于 AMD MI400 / MI500 平台 + 博通定制 ASIC 路径 + 英特尔高端 Gaudi 系列——这三家在 2026-2028 的总份额业内估算 15-20%，UALink 即使技术追上 NVLink，市场份额上限被客户端规模卡死。
+**挑战 2：AMD 的产品节奏**。UALink 阵营的事实主导者是 AMD，但 AMD 在数据中心 GPU 上的份额 2025 业内估算只占 5-10%（NVDA ~90%+）。UALink 的客户端主要寄希望于 AMD MI400 / MI500 平台 + 博通定制 ASIC 路径 + 英特尔高端 Gaudi 系列——这三家在 2026-2028 的总份额15-20%，UALink 即使技术追上 NVLink，市场份额上限被客户端规模卡死。
 
 把这两件事放回 NVDA 在 scale-up 这一层的位置上看，NVLink 在 2026-2028 这三年内的事实垄断地位非常稳。**这就是前文所说 NVDA 在 scale-up 层与 scale-out 层都各占一头中前一头的物理根据**。
 
@@ -256,16 +256,16 @@ UALink 的两个结构性挑战：
 | 英伟达 DGX SuperPOD / Selene / Eos | InfiniBand 100% | 自家标杆集群 |
 | Microsoft Azure（H100 / H200 / B200）| InfiniBand 主力 + 部分以太网 / Spectrum-X 试点 | 与 NVDA 关系紧密 |
 | Oracle OCI Supercluster（H100 / H200）| InfiniBand 主力 | 已公开 |
-| OpenAI Stargate Abilene | InfiniBand 主力（业内估算）| 与 NVDA 紧密关系，具体配比未披露 |
+| OpenAI Stargate Abilene | InfiniBand 主力| 与 NVDA 紧密关系，具体配比未披露 |
 | xAI Colossus（200K H100）| 以太网 + Spectrum-X 部分 | 成本与部署速度优先，接受 5-10% 性能损失 |
 | Meta（H100 集群 + 部分 MTIA）| 以太网主力 + RoCEv2 | 以太网阵营最激进代表，自研 OCP 网络架构 |
 | AWS | 以太网（自研 EFA 协议）| 云原生自研路线 |
 | Google Cloud（H100 / B200 + TPU）| 自研 Jupiter 以太网 + InfiniBand 双模 | TPU 域内走自研 ICI |
-| Anthropic | Spectrum-X + 以太网混合（业内估算）| 截至 2026-05 未完全公开 |
+| Anthropic | Spectrum-X + 以太网混合| 截至 2026-05 未完全公开 |
 
 把这张行为表抽象一下：**在云原生厂家自研网络（AWS、Meta、Google）之外，几乎所有 H100 / B200 大集群默认走 InfiniBand**。原因是 InfiniBand 在 RDMA（Remote Direct Memory Access，远程直接内存访问，绕过 OS 内核的零拷贝网络协议）协议层做了 30 年优化，在 AI 训练里 NCCL 集合通信延迟、拥塞控制、自适应路由都比 RoCEv2（RDMA over Converged Ethernet version 2，把 RDMA 跑在以太网上的标准）成熟。
 
-InfiniBand 在 H100 / B200 集群里的事实垄断，在英伟达财务上的表现是**业内估算 70%+ 的 InfiniBand 业务毛利率**（NVDA 不分品类披露 InfiniBand 单独毛利率），与 NVDA FY26 整体数据中心业务 ~70-75% 毛利率持平。换个角度看，NVDA 卖一颗 H100 给超大规模云厂时，对方大概率还要同时买 Quantum-2 InfiniBand 交换机（64 端口 × 400 Gb/s NDR，单台业内估算 \$30-50K）、ConnectX-7 网卡（单卡 \$1.5-2K）和 Mellanox 配套光模块——这些都是 NVDA 在 GPU 之外的网络层抽税。
+InfiniBand 在 H100 / B200 集群里的事实垄断，在英伟达财务上的表现是**业内估算 70%+ 的 InfiniBand 业务毛利率**（NVDA 不分品类披露 InfiniBand 单独毛利率），与 NVDA FY26 整体数据中心业务 ~70-75% 毛利率持平。换个角度看，NVDA 卖一颗 H100 给超大规模云厂时，对方大概率还要同时买 Quantum-2 InfiniBand 交换机（64 端口 × 400 Gb/s NDR，单台\$30-50K）、ConnectX-7 网卡（单卡 \$1.5-2K）和 Mellanox 配套光模块——这些都是 NVDA 在 GPU 之外的网络层抽税。
 
 第 7 章把这件事命名为 NVDA 五税中的 NVLink 系统税，但 NVLink 严格意义只覆盖 scale-up 这一层。NVDA 在 scale-out 这一层（InfiniBand）也有同样的抽税机制——本章把这两层合起来叫**NVDA 网络层双抽税：scale-up 走 NVLink 系统税，scale-out 走 InfiniBand 系统税**。
 
@@ -289,11 +289,11 @@ flowchart LR
 
 把双抽税的现金价值算一下：
 
-| 抽税项 | 业务边界 | FY26 营收 | 业内估算毛利率 | 业内估算毛利贡献 |
+| 抽税项 | 业务边界 | FY26 营收 | 毛利率 | 毛利贡献 |
 |--------|---------|----------:|--------------|---------------|
-| scale-up（NVLink IP，内嵌 GPU / 整柜定价）| 不单独售卖 | 业内估算 \$5-8B（IP 价值内嵌，未单独定价）| ~70% | \$3.5-5.6B |
+| scale-up（NVLink IP，内嵌 GPU / 整柜定价）| 不单独售卖 | \$5-8B（IP 价值内嵌，未单独定价）| ~70% | \$3.5-5.6B |
 | Networking 业务（含 NVLink Switch System + InfiniBand + Spectrum-X 以太网）| 独立销售 | \$31.4B（一手，FY26 Q4 财报电话会 2026-02-25）| ~70%+ | ~\$22B |
-| **网络层双抽税合计** | | **业内估算 \$36-39B** | | **业内估算 \$25-28B** |
+| **网络层双抽税合计** | | **\$36-39B** | | **\$25-28B** |
 
 > 一手 + 业内估算混合口径。NVDA Networking 业务 FY26 全年 \$31.4B、同比 +142% 为一手披露（Q4 FY26 财报电话会 2026-02-25），含 NVLink Switch System（NVL72 / 后续 NVL576 整柜配套的 NVSwitch tray 销售）+ InfiniBand（Quantum-2 / 3）+ Spectrum-X 以太网三类。英伟达不分子产品披露细分营收与毛利率，本表 70%+ 毛利率为业内综合估算（Bernstein / Morgan Stanley 2025-2026 NVDA networking 跟踪研报 + NVDA 数据中心整体毛利率反推）。scale-up NVLink IP 内嵌 GPU 定价的 \$5-8B 是协议 IP 在整柜价格里的隐性贡献，与 Networking 业务（含 NVLink Switch tray 实体销售）独立计算，避免重复。
 
@@ -318,10 +318,10 @@ NVDA 在 2020 收购 Mellanox 时市场的认知主要停留在 NVDA 进入数�
 | 指标 | FY25 | Q4 FY25 单季 | 一手来源 |
 |------|-----:|------------:|---------|
 | 总营收 | \$63.89B | \$18.0B | StockAnalysis AVGO FY25 + Q4 FY25 earnings (The Motley Fool 2025-12-12) |
-| GAAP 毛利率 | 67.77% | 业内估算 ~70%（Q4 经营改善）| StockAnalysis 一手 + Q4 财报电话会 |
-| Non-GAAP 毛利率（业内常用口径）| 业内估算 ~75% | 业内估算 ~76% | AVGO Q4 FY25 财报电话会 transcript（Motley Fool）|
+| GAAP 毛利率 | 67.77% | ~70%（Q4 经营改善）| StockAnalysis 一手 + Q4 财报电话会 |
+| Non-GAAP 毛利率（业内常用口径）| ~75% | ~76% | AVGO Q4 FY25 财报电话会 transcript（Motley Fool）|
 | 营业利润率（GAAP）| 39.89% | ~44%（Q4 经营杠杆改善）| StockAnalysis 一手 |
-| 调整后 EBITDA（Non-GAAP；EBITDA = 息税折旧摊销前利润，经营现金创造能力的近似指标）| 业内估算 ~\$40-42B | \$12.12B（68% of revenue）| AVGO Q4 FY25 财报电话会一手 |
+| 调整后 EBITDA（Non-GAAP；EBITDA = 息税折旧摊销前利润，经营现金创造能力的近似指标）| ~\$40-42B | \$12.12B（68% of revenue）| AVGO Q4 FY25 财报电话会一手 |
 | AI 半导体营收（全年）| \$20B（+65% YoY，一手）| \$6.5B | AVGO Q4 FY25 财报电话会 2025-12-12 一手（管理层原文 AI revenue grew 65% year over year to \$20 billion）|
 | AI 半导体营收同比增速 | YoY +74%（Q4）| +74%（Q4）| AVGO Q4 FY25 财报电话会一手 |
 | AI 相关合同储备（18 个月内可交付）| \$73B | — | AVGO Q4 FY25 财报电话会一手 |
@@ -338,9 +338,9 @@ NVDA 在 2020 收购 Mellanox 时市场的认知主要停留在 NVDA 进入数�
 
 把 AVGO AI 半导体业务从 FY24 Q1 到 FY25 Q4 这 8 个季度的营收拉一条曲线出来（图 8-5）：
 
-| 季度 | AI 半导体营收 | 同比增速 | 业内估算网络 / 定制 XPU 拆分 |
+| 季度 | AI 半导体营收 | 同比增速 | 网络 / 定制 XPU 拆分 |
 |------|----:|----:|---|
-| FY24 Q1（截至 2024-02）| ~\$2.3B | 业内估算 +200%+ | 网络 ~40% / 定制 XPU ~60% |
+| FY24 Q1（截至 2024-02）| ~\$2.3B | +200%+ | 网络 ~40% / 定制 XPU ~60% |
 | FY24 Q2（截至 2024-05）| \$3.1B | YoY +280% | 网络 ~40% / 定制 XPU ~60% |
 | FY24 Q3（截至 2024-08）| \$3.2B | YoY +200%+ | 网络 ~35% / 定制 XPU ~65% |
 | FY24 Q4（截至 2024-11）| \$3.7B | YoY +150% | 网络 ~35% / 定制 XPU ~65% |
@@ -405,7 +405,7 @@ pie title AVGO FY25 AI 半导体营收按业务拆分 (USD B, 业内估算)
 
 AVGO 在以太网交换芯片（Switch ASIC）市场的地位需要单独讲。把全球数据中心以太网交换 ASIC 市场份额拉出来看：
 
-| 厂家 | 2025 业内估算市占（数据中心交换 ASIC）| 主力产品 |
+| 厂家 | 2025 市占（数据中心交换 ASIC）| 主力产品 |
 |------|---:|---|
 | 博通 | ~70%+ | Tomahawk 5 / 6 / 6X、Jericho 3、StrataDNX |
 | 英伟达 Mellanox（含 Spectrum 系列）| ~10%+ | Spectrum-X 800、Spectrum-4 |
@@ -426,7 +426,7 @@ pie title 数据中心以太网交换 ASIC 2025 市占 (业内估算)
 
 如图 8-7 所示，博通在数据中心交换 ASIC 上的 ~70%+ 市占率，是 AI 集群 scale-out 以太网路径的物理基础。Meta、Google、AWS、xAI、Microsoft 这五家超大规模云厂在自研以太网交换机（白盒交换机，white box switch）上几乎全部用博通 Tomahawk 系列 ASIC + 自家或 ODM 厂硬件组装。这一类白盒交换机的形态在 §8.5 与 Arista 路径对比时再展开。
 
-Jericho 3 系列是博通在跨数据中心 / 跨地区路由层的核心产品，单芯片支持 14.4 Tb/s 路由能力 + 深包缓冲（deep buffer）+ HBM 集成。Jericho 3 在 AI 数据中心的角色是跨集群互连——把单一数据中心内的多个 8K-32K 卡子集群通过 Jericho 路由层串起来，构成 100K+ 卡级别的大集群。这一层在 H100 时代还不是主流，到 B200 / GB200 时代变成必备。Jericho 3 单芯片业内估算 ASP \$3-5K，单台路由器（含多颗 Jericho + 光模块 + 网卡）业内估算 \$50-100K 区间。
+Jericho 3 系列是博通在跨数据中心 / 跨地区路由层的核心产品，单芯片支持 14.4 Tb/s 路由能力 + 深包缓冲（deep buffer）+ HBM 集成。Jericho 3 在 AI 数据中心的角色是跨集群互连——把单一数据中心内的多个 8K-32K 卡子集群通过 Jericho 路由层串起来，构成 100K+ 卡级别的大集群。这一层在 H100 时代还不是主流，到 B200 / GB200 时代变成必备。Jericho 3 单芯片业内估算 ASP \$3-5K，单台路由器（含多颗 Jericho + 光模块 + 网卡）\$50-100K 区间。
 
 ### AVGO 业务模型与 NVDA 的对照
 
@@ -435,7 +435,7 @@ Jericho 3 系列是博通在跨数据中心 / 跨地区路由层的核心产品�
 | 维度 | NVDA（GPU + 网络）| AVGO（定制 ASIC + 网络交换）|
 |------|---|---|
 | 主力产品 | H100 / H200 / B200 / GB200 / Rubin | Tomahawk 系列 + Jericho 系列 + 定制 XPU |
-| 客户结构 | 集中（前 5 客户业内估算占 50%+，但是超大规模云厂长合约）| 集中（前 5 客户业内估算占 AI 半导体业务 80%+，超大规模云厂长合约）|
+| 客户结构 | 集中（前 5 客户占 50%+，但是超大规模云厂长合约）| 集中（前 5 客户占 AI 半导体业务 80%+，超大规模云厂长合约）|
 | 营收模型 | 标准品（NVDA 自己设计 + 自己销售）| 半定制（AVGO 帮超大规模云厂设计 + 超大规模云厂自用）|
 | 毛利率（最近年度）| FY26 GAAP 毛利率 71.07% | FY25 GAAP 毛利率 67.77%（Non-GAAP ~75%）|
 | 客户议价权 | 客户已经被 CUDA / NVLink 锁定 | 客户随时可以切换设计厂（美满电子是潜在竞争对手）|
@@ -449,7 +449,7 @@ Jericho 3 系列是博通在跨数据中心 / 跨地区路由层的核心产品�
 
 **第二，AVGO 与超大规模云厂是竞合关系**。AVGO 给 Google 设计 TPU，但 TPU 出货后 Google Cloud 上 TPU 与 NVDA H100 / B200 是竞品。AVGO 给 Meta 设计 MTIA，MTIA 与 NVDA 在 Meta 内部算力账本里此消彼长。AVGO 在这条关系里的位置是卖铲子给挖金子的人——超大规模云厂用 AVGO 帮忙做的 ASIC 去与 NVDA 竞争，AVGO 两边都赚（卖网络交换给 NVDA 阵营的超大规模云厂，卖定制 ASIC 设计给 NVDA 阵营的对手），是 AI 算力周期里少有的对冲性质的位置。
 
-**第三，AVGO 的市场关注度比 NVDA 低一个量级**。截至本章 data cutoff 2026-05，AVGO 市值业内估算 \$1.0-1.2T 区间（业内估算，市值随股价快速变动），NVDA 市值 \$5T+。但从财务质量看：AVGO FY25 营业利润率 39.89%、调整后 EBITDA 利润率 68%，与 NVDA FY26 营业利润率 60.38% 在量级上接近。AVGO 与 NVDA 的相对市值 vs 财务质量差距，是市场对 AI 算力链结构的关注偏差——投资判断留到估值专章，这里只把这个结构性差异留在桌面上。
+**第三，AVGO 的市场关注度比 NVDA 低一个量级**。截至本章 data cutoff 2026-05，AVGO 市值业内估算 \$1.0-1.2T 区间（，市值随股价快速变动），NVDA 市值 \$5T+。但从财务质量看：AVGO FY25 营业利润率 39.89%、调整后 EBITDA 利润率 68%，与 NVDA FY26 营业利润率 60.38% 在量级上接近。AVGO 与 NVDA 的相对市值 vs 财务质量差距，是市场对 AI 算力链结构的关注偏差——投资判断留到估值专章，这里只把这个结构性差异留在桌面上。
 
 ## 8.5 Spectrum-X：以太网阵营的反扑与 NVDA 的应对
 
@@ -468,7 +468,7 @@ Spectrum-X 与 InfiniBand 的本质差异是**协议层 vs 物理层**——Infi
 
 ### 32K 卡是 IB vs 以太网的拐点
 
-业内综合的判断是：**集群规模在 32K 卡以下，InfiniBand 与以太网的性能差距业内估算 ±5%；32K-64K 卡之间 InfiniBand 微弱领先；64K 卡以上 InfiniBand 优势显著（业内估算 10-20% all-reduce 吞吐量优势），但以太网在成本与生态上反向占优**。
+业内综合的判断是：**集群规模在 32K 卡以下，InfiniBand 与以太网的性能差距业内估算 ±5%；32K-64K 卡之间 InfiniBand 微弱领先；64K 卡以上 InfiniBand 优势显著（10-20% all-reduce 吞吐量优势），但以太网在成本与生态上反向占优**。
 
 ### IB vs 以太网集群成本对比
 
@@ -489,7 +489,7 @@ Spectrum-X 与 InfiniBand 的本质差异是**协议层 vs 物理层**——Infi
 
 表里的数字就是超大规模云厂在 IB vs 以太网之间的实际权衡：**白盒以太网方案在 BOM 成本上比 IB 便宜 30%，但训练吞吐性能损失 5-10%；Spectrum-X 方案在性能损失上比白盒以太网小，但 BOM 成本回到 IB 同档**。Hyperscaler 在这个三角选择里的决策取决于三件事——集群规模（越大 IB 优势越明显）、运维能力（白盒以太网需要自研网络栈，运维门槛高）、与 NVDA 的关系（紧密关系倾向 IB / Spectrum-X，独立倾向白盒以太网）。
 
-超大规模云厂在这个三角里的实际选择，§8.3 的选型表已经列过：xAI（成本与部署速度优先）、Meta（自研 OCP 网络）站以太网，Microsoft、Oracle、OpenAI 站 InfiniBand，Anthropic 业内估算走 Spectrum-X 混合。把这些放一起看：**以太网阵营在 2024-2026 这两年里从边缘选项变成了主流选项之一**——xAI、Meta、Anthropic 这三家在以太网路径上的实际部署量，已经让以太网在 AI 训练集群里的份额从 H100 时代的 ~10% 上升到 B200 / GB200 时代的业内估算 30-40%（业内综合戴尔'Oro / Bernstein 估算）。
+超大规模云厂在这个三角里的实际选择，§8.3 的选型表已经列过：xAI（成本与部署速度优先）、Meta（自研 OCP 网络）站以太网，Microsoft、Oracle、OpenAI 站 InfiniBand，Anthropic 业内估算走 Spectrum-X 混合。把这些放一起看：**以太网阵营在 2024-2026 这两年里从边缘选项变成了主流选项之一**——xAI、Meta、Anthropic 这三家在以太网路径上的实际部署量，已经让以太网在 AI 训练集群里的份额从 H100 时代的 ~10% 上升到 B200 / GB200 时代的30-40%（业内综合戴尔'Oro / Bernstein 估算）。
 
 但这件事对 NVDA 的影响是**净中性**——以太网阵营的客户里相当大一部分仍然走 Spectrum-X，NVDA 在以太网路径上的毛利率虽然比 InfiniBand 低（业内估算 60-65% vs InfiniBand 70%+），但收入仍归 NVDA Networking 业务。**NVDA 在 scale-out 这一层的双轨策略——InfiniBand 守高毛利核心客户，Spectrum-X 接以太网阵营客户——让 NVDA 的网络层抽税同时覆盖两条产业路径**。
 
@@ -503,7 +503,7 @@ ANET 在 AI 网络市场的位置是标准化以太网 + 高端整机服务。�
 
 | 路径 | 代表玩家 | 毛利率结构 | 适用场景 |
 |------|---------|----------|---------|
-| NVDA Spectrum-X | 英伟达 Networking | 业内估算 60-65% | 想用以太网但不想自己造车的超大规模云厂 |
+| NVDA Spectrum-X | 英伟达 Networking | 60-65% | 想用以太网但不想自己造车的超大规模云厂 |
 | Arista 整机 + 博通芯片 | Arista + 博通 | Arista 整机 64% + 博通芯片 ~70% | 企业级 + 大客户需要厂商支持 |
 | 白盒交换机 + 博通芯片 | Meta / Google / AWS / 部分中国云 + 博通 + ODM | 博通芯片 ~70% + ODM 组装 8-12%（参见第 9 章整柜利润）| 自研网络的超大规模云厂 |
 
@@ -529,7 +529,7 @@ flowchart LR
 
 **图 8-8：PCIe retimer 在服务器主板上的物理位置——CPU 与 GPU 之间长走线的信号中继站**
 
-每张英伟达 GPU 加速卡（H100 / H200 / B200 / GB200）的服务器板上业内估算需要 1-2 颗 PCIe Gen5 retimer。Astera Labs 在这个细分市场里业内估算占 60%+ 份额（业内估算综合 SemiAnalysis 2024-2025 + Crehan Research 互连芯片市占跟踪，ALAB 不分品类披露 retimer 单品市占）。其他玩家是 Montage Technology（中国，澜起科技 688008.SS）、Microchip Technology、Texas Instruments，但份额都远低于 ALAB。
+每张英伟达 GPU 加速卡（H100 / H200 / B200 / GB200）的服务器板上业内估算需要 1-2 颗 PCIe Gen5 retimer。Astera Labs 在这个细分市场里占 60%+ 份额（综合 SemiAnalysis 2024-2025 + Crehan Research 互连芯片市占跟踪，ALAB 不分品类披露 retimer 单品市占）。其他玩家是 Montage Technology（中国，澜起科技 688008.SS）、Microchip Technology、Texas Instruments，但份额都远低于 ALAB。
 
 ### 隐形抽税机制
 
@@ -549,9 +549,9 @@ flowchart LR
 
 单台服务器上几乎可以忽略的一颗小芯片，乘以全球出货量就是一个十亿美元量级的市场——这正是隐形抽税的形态。
 
-**第二，PCIe 标准升级时供应商优势会进一步放大**。PCIe Gen5（32 GT/s，当前主流）升 Gen6（64 GT/s，2025-2026 开始量产）时信号完整性挑战翻倍——Gen6 在 PCB 上的有效传输距离从 30 cm 缩到 15 cm，意味着 retimer 用量翻倍 + 单 retimer ASP 翻倍。Astera Labs 在 PCIe Gen6 retimer 上的技术储备业内估算领先 Montage 与其他厂家 6-12 个月（业内估算综合 ALAB 公开技术披露 + 卖方研报 2025）。这件事在 PCIe Gen7（预计 2027-2028 发布）切换时还会再放大一次。
+**第二，PCIe 标准升级时供应商优势会进一步放大**。PCIe Gen5（32 GT/s，当前主流）升 Gen6（64 GT/s，2025-2026 开始量产）时信号完整性挑战翻倍——Gen6 在 PCB 上的有效传输距离从 30 cm 缩到 15 cm，意味着 retimer 用量翻倍 + 单 retimer ASP 翻倍。Astera Labs 在 PCIe Gen6 retimer 上的技术储备业内估算领先 Montage 与其他厂家 6-12 个月（综合 ALAB 公开技术披露 + 卖方研报 2025）。这件事在 PCIe Gen7（预计 2027-2028 发布）切换时还会再放大一次。
 
-**第三，CXL（Compute Express Link，基于 PCIe 物理层的内存一致性互连协议，可以让 CPU 与加速器共享内存）这条新赛道刚开始**。CXL 1.1 / 2.0 已经发布，3.0 在 2024-2025 落地。CXL 在 AI 服务器上的位置是内存池化 + 跨节点内存共享——一台服务器的 CPU 可以通过 CXL 远程访问另一台服务器的内存。这条赛道在 AI 训练里的实际价值业内有争议，但在 AI 推理（特别是 KV cache 池化、大上下文推理）里有明确价值。Astera Labs 在 CXL 控制器芯片上业内估算占 30-50% 市占（业内估算，ALAB 不分品类披露 CXL 营收占比）。
+**第三，CXL（Compute Express Link，基于 PCIe 物理层的内存一致性互连协议，可以让 CPU 与加速器共享内存）这条新赛道刚开始**。CXL 1.1 / 2.0 已经发布，3.0 在 2024-2025 落地。CXL 在 AI 服务器上的位置是内存池化 + 跨节点内存共享——一台服务器的 CPU 可以通过 CXL 远程访问另一台服务器的内存。这条赛道在 AI 训练里的实际价值业内有争议，但在 AI 推理（特别是 KV cache 池化、大上下文推理）里有明确价值。Astera Labs 在 CXL 控制器芯片上业内估算占 30-50% 市占（，ALAB 不分品类披露 CXL 营收占比）。
 
 ### ALAB 的毛利率结构与可持续性
 
@@ -573,7 +573,7 @@ ALAB FY25 的几个关键数字组合：
 
 > 来源：ALAB FY25 财务一手来自 StockAnalysis ALAB 财务页（数据回溯自 ALAB FY25 10-K）；员工数与 IPO 信息来自 Wikipedia 财务摘要一手核实。
 
-把这几条数字放一起看，ALAB 是一家高毛利、高增速、轻人员、高单员工产出的 fabless 半导体设计公司。这种财务画像在产业里是少数——同口径对照 NVDA FY26 单员工营收业内估算 ~\$3M（NVDA 约 32,000 员工 / 营收 \$215.9B）、AVGO FY25 单员工营收业内估算 \$1.9M（AVGO 33,000 员工 / 营收 \$63.89B）。ALAB 的单员工营收 \$1.13M 已经在 AI 算力链上属于上游设计端的高水位线。
+把这几条数字放一起看，ALAB 是一家高毛利、高增速、轻人员、高单员工产出的 fabless 半导体设计公司。这种财务画像在产业里是少数——同口径对照 NVDA FY26 单员工营收业内估算 ~\$3M（NVDA 约 32,000 员工 / 营收 \$215.9B）、AVGO FY25 单员工营收\$1.9M（AVGO 33,000 员工 / 营收 \$63.89B）。ALAB 的单员工营收 \$1.13M 已经在 AI 算力链上属于上游设计端的高水位线。
 
 但 ALAB 的可持续性有两个关注点：
 
@@ -587,12 +587,12 @@ ALAB 是本章网络层多个细分市场高毛利玩家的典型——这一类
 
 把 PCIe 标准代际、Astera Labs 产品线、AI 服务器配置的协同节奏拉一条时间线出来：
 
-| 时点 | PCIe 标准 | 主流速率 | Astera Labs 产品 | AI 服务器配置（业内估算）|
+| 时点 | PCIe 标准 | 主流速率 | Astera Labs 产品 | AI 服务器配置|
 |------|---------|---------|----------------|------------------------|
 | 2019-2021 | PCIe Gen4 | 16 GT/s | Aries Gen4 retimer | 单台 8 卡 A100 用 4-8 颗 retimer |
 | 2022-2024 | PCIe Gen5 | 32 GT/s | Aries Gen5 retimer + Smart DSP retimer | 单台 8 卡 H100 用 8-16 颗 retimer |
 | 2025-2027 | PCIe Gen5/Gen6 混合 | 32-64 GT/s | Aries Gen5/Gen6 retimer + Leo CXL controller + Scorpio fabric switch | 单台 8 卡 B200 用 16-24 颗 retimer + 部分 CXL controller |
-| 2027-2029 | PCIe Gen6 | 64 GT/s | 路标含 Gen6 全系列 + Gen7 准备 | 业内估算单台 8 卡 Rubin 用 24-32 颗 retimer + 完整 CXL 集成 |
+| 2027-2029 | PCIe Gen6 | 64 GT/s | 路标含 Gen6 全系列 + Gen7 准备 | 单台 8 卡 Rubin 用 24-32 颗 retimer + 完整 CXL 集成 |
 
 > 来源：PCIe 标准时点综合 PCI-SIG 公开路标；Astera Labs 产品线综合 ALAB S-1 + FY25 10-K + 公开技术披露；AI 服务器配置业内估算综合 SemiAnalysis 服务器 BOM 分析 + ALAB 公开客户应用案例。
 
@@ -608,13 +608,13 @@ ALAB 在细分市场之外的扩展节奏值得跟踪：**从 retimer 单品扩�
 
 ## 8.7 光模块周期：800G → 1.6T 切换的赢家与节奏
 
-光模块是 AI 集群里物理流量真正的载体。每台 AI 服务器对外接 8-16 个 800G 光模块（B200 / GB200 时代），全球 AI 服务器 2025-2026 出货量 200-300 万台对应光模块需求业内估算 2,000-4,800 万颗（业内估算综合 LightCounting 2025 + 戴尔'Oro 2025-Q4）。这是过去三年光模块四厂（中际旭创 300308.SZ / 新易盛 300502.SZ / Coherent COHR / Lumentum LITE）业绩与股价两高的物理基础。
+光模块是 AI 集群里物理流量真正的载体。每台 AI 服务器对外接 8-16 个 800G 光模块（B200 / GB200 时代），全球 AI 服务器 2025-2026 出货量 200-300 万台对应光模块需求业内估算 2,000-4,800 万颗（综合 LightCounting 2025 + 戴尔'Oro 2025-Q4）。这是过去三年光模块四厂（中际旭创 300308.SZ / 新易盛 300502.SZ / Coherent COHR / Lumentum LITE）业绩与股价两高的物理基础。
 
 ### 光模块四厂市占（800G）
 
 按 LightCounting 2025-Q4 + 戴尔'Oro 2025-Q4 综合，800G 光模块 2025 年全球市占（业内综合口径）：
 
-| 厂家 | 2025 业内估算 800G 市占 | 主力客户 |
+| 厂家 | 2025 800G 市占 | 主力客户 |
 |------|---:|---|
 | 中际旭创（Innolight，300308.SZ）| ~40% | 英伟达 / Microsoft / Meta / Google |
 | 新易盛（Eoptolink，300502.SZ）| ~20% | 英伟达 / AWS / Meta |
@@ -635,27 +635,27 @@ pie title 800G 光模块 2025 全球市占 (业内估算)
 
 **图 8-9：800G 光模块 2025 年全球市占（业内估算，综合 LightCounting / 戴尔'Oro）**
 
-中际旭创在 800G 光模块市场上 ~40% 的市占（图 8-9），是中国 A 股市场过去三年最值得关注的产业链高毛利环节。中际旭创 2025 年营收业内估算 ¥30B+、毛利率 30%+（综合其 2025 半年报与三季报推演）。这个毛利率与美国厂家 Coherent 的约 50%、Lumentum 的 30-40%（均为业内估算）之间的差距，反映的是中国与美国光模块厂在毛利结构上的分化。
+中际旭创在 800G 光模块市场上 ~40% 的市占（图 8-9），是中国 A 股市场过去三年最值得关注的产业链高毛利环节。中际旭创 2025 年营收业内估算 ¥30B+、毛利率 30%+（综合其 2025 半年报与三季报推演）。这个毛利率与美国厂家 Coherent 的约 50%、Lumentum 的 30-40%（均为）之间的差距，反映的是中国与美国光模块厂在毛利结构上的分化。
 
 业内综合：
 
-| 厂家 | 2025 业内估算营收（USD 量级换算）| 业内估算毛利率 | 主要产品 |
+| 厂家 | 2025 营收（USD 量级换算）| 毛利率 | 主要产品 |
 |------|---:|---:|---|
-| 中际旭创（300308.SZ）| 业内估算 \$4-5B | 业内估算 30%+ | 800G QSFP-DD + 1.6T OSFP + 400G ZR/ZR+ |
-| 新易盛（300502.SZ）| 业内估算 \$2.5-3B | 业内估算 30%+ | 800G QSFP-DD + 1.6T 启动 |
-| Coherent（COHR）| FY25 业内估算 \$5-6B（光模块业务部分；整体含激光器 / 显示等多线，光模块业内估算占比 30-40%）| 业内估算 50%（光模块业务部分）| 800G + 1.6T + 长距离相干光模块 |
-| Lumentum（LITE）| FY25 业内估算 \$1.5-2B（光模块业务部分；整体含 3D sensing 等多线）| 业内估算 35-45%（光模块业务部分）| 800G + 激光器 + 相干光 |
-| 天孚通信（300394.SZ）| 业内估算 \$1B+ | 业内估算 40%+ | 光纤连接器 + 隔离器 + 配套零部件 |
+| 中际旭创（300308.SZ）| \$4-5B | 30%+ | 800G QSFP-DD + 1.6T OSFP + 400G ZR/ZR+ |
+| 新易盛（300502.SZ）| \$2.5-3B | 30%+ | 800G QSFP-DD + 1.6T 启动 |
+| Coherent（COHR）| FY25 \$5-6B（光模块业务部分；整体含激光器 / 显示等多线，光模块占比 30-40%）| 50%（光模块业务部分）| 800G + 1.6T + 长距离相干光模块 |
+| Lumentum（LITE）| FY25 \$1.5-2B（光模块业务部分；整体含 3D sensing 等多线）| 35-45%（光模块业务部分）| 800G + 激光器 + 相干光 |
+| 天孚通信（300394.SZ）| \$1B+ | 40%+ | 光纤连接器 + 隔离器 + 配套零部件 |
 
 > 来源：四厂业内估算综合 LightCounting 2025-Q4 报告 + 三家中国 A 股 2025 半年报与三季报数据 + Coherent / Lumentum FY25 10-K 业务线披露综合（光模块业务在 Coherent / Lumentum 不单独披露独立营收）。各家具体数字业内估算，区间 ±20%。
 
 中国厂家（中际旭创 / 新易盛 / 天孚通信）与美国厂家（Coherent / Lumentum）在毛利率结构上的差异主要来自三个因素：
 
-**因素 1：上游零部件依赖度**。中国厂家在光芯片（激光器 / 探测器）/ 光 DSP / 高速 driver 这一层业内估算 70%+ 依赖美满电子 / 博通 / Inphi / Lumentum / Coherent 等海外厂家供货。这一层 BOM 占整模块成本业内估算 40-50%，海外供应商在这一层抽取高毛利。中国厂家的模块整机集成 + 调试 + 出货业内估算毛利率 30%+，单一环节高毛利项被卡在上游。
+**因素 1：上游零部件依赖度**。中国厂家在光芯片（激光器 / 探测器）/ 光 DSP / 高速 driver 这一层业内估算 70%+ 依赖美满电子 / 博通 / Inphi / Lumentum / Coherent 等海外厂家供货。这一层 BOM 占整模块成本40-50%，海外供应商在这一层抽取高毛利。中国厂家的模块整机集成 + 调试 + 出货毛利率 30%+，单一环节高毛利项被卡在上游。
 
 **因素 2：客户结构**。中国厂家主要客户是英伟达 / Microsoft / Meta / Google / AWS 等美国超大规模云厂——这些客户对光模块价格的议价能力非常强，订单量大但 ASP 受压。美国本土厂家（Coherent / Lumentum）的客户结构里有一部分企业级与电信运营商，订单单价高但出货量小，整体毛利率反而高一档。
 
-**因素 3：产能规模与制造效率**。中国厂家在制造规模上业内估算领先 30-50%（一家中际旭创单厂年产 800G 模块业内估算 600-800 万颗，对比 Coherent / Lumentum 业内估算单厂年产 150-300 万颗），制造效率高但议价权弱——大客户用集中订单 + 多源采购压价，中国厂家很难在制造规模优势上转换为更高毛利。
+**因素 3：产能规模与制造效率**。中国厂家在制造规模上业内估算领先 30-50%（一家中际旭创单厂年产 800G 模块600-800 万颗，对比 Coherent / Lumentum 单厂年产 150-300 万颗），制造效率高但议价权弱——大客户用集中订单 + 多源采购压价，中国厂家很难在制造规模优势上转换为更高毛利。
 
 业内综合判断：**中国光模块四厂在 800G / 1.6T 切换周期里的位置是高营收弹性 + 中等毛利率 + 客户集中度风险高的三个特征叠加**。这是与 ALAB / AVGO 这一类高毛利 + 客户多元化芯片设计厂家的本质差异——光模块这一层的产业经济仍然是硬件制造 + 集成的传统结构，没有进入芯片设计 + 协议 IP 那一层的高毛利空间。
 
@@ -674,9 +674,9 @@ pie title 800G 光模块 2025 全球市占 (业内估算)
 
 1.6T 切换对四厂的影响有几层：
 
-**第一，技术领先程度决定 1.6T 首批份额**。中际旭创在 1.6T 上业内估算技术储备领先，目标 2026-H1 大客户爬坡；新易盛、Coherent、Lumentum 业内估算紧随其后，2026-H2 跟上。
+**第一，技术领先程度决定 1.6T 首批份额**。中际旭创在 1.6T 上业内估算技术储备领先，目标 2026-H1 大客户爬坡；新易盛、Coherent、Lumentum 紧随其后，2026-H2 跟上。
 
-**第二，单 1.6T 模块 ASP 是 800G 的 2-2.5×**，业内估算 \$1,500-2,500 区间（vs 800G 模块 ASP 业内估算 \$600-1,000）。同等出货量下营收弹性大约 2×。
+**第二，单 1.6T 模块 ASP 是 800G 的 2-2.5×**，业内估算 \$1,500-2,500 区间（vs 800G 模块 ASP \$600-1,000）。同等出货量下营收弹性大约 2×。
 
 **第三，1.6T 模块的物料结构比 800G 更复杂**——需要 200G/lane PAM4 DSP（数字信号处理器，光模块电信号处理核心芯片）、高速 driver、TIA（trans-impedance amplifier，跨阻放大器）、激光器、光纤连接器。这一类上游零部件的瓶颈在 2026 上半年已经显现——美满电子（MRVL）、博通（AVGO）、AAOI、Lumentum 等是光模块上游 DSP / TIA / Driver 厂，1.6T 切换让这一层的毛利结构也上行。
 
@@ -688,9 +688,9 @@ pie title 800G 光模块 2025 全球市占 (业内估算)
 
 业内综合三家 2025 年报（截至 data cutoff 2026-05，2025 年报已披露，但本章业内估算口径，具体数字按各家 IR 披露口径）：
 
-- **中际旭创 2025 年报**：海外营收占比业内估算 80%+（主要是英伟达 / Microsoft / Meta / Google 美国大客户），国内华为产业链业内估算 < 10%
-- **新易盛 2025 年报**：海外营收占比业内估算 85%+，国内业内估算 < 10%
-- **天孚通信 2025 年报**：海外营收占比业内估算 70%+，国内业内估算 20-30%（含华为光模块的零部件配套）
+- **中际旭创 2025 年报**：海外营收占比业内估算 80%+（主要是英伟达 / Microsoft / Meta / Google 美国大客户），国内华为产业链< 10%
+- **新易盛 2025 年报**：海外营收占比业内估算 85%+，国内< 10%
+- **天孚通信 2025 年报**：海外营收占比业内估算 70%+，国内20-30%（含华为光模块的零部件配套）
 
 > 业内估算综合口径。三家 A 股年报会披露境外营收占比，但不会单独披露对英伟达或对 Meta 的客户营收。本表口径为业内综合估算 + 三家 IR 公开口径。
 
@@ -704,17 +704,17 @@ pie title 800G 光模块 2025 全球市占 (业内估算)
 
 把这件事翻译成毛利分布：
 
-| 层级 | 主导厂家 | 业内估算毛利率 | FY26 / 2026 年化营收（AI 相关）|
+| 层级 | 主导厂家 | 毛利率 | FY26 / 2026 年化营收（AI 相关）|
 |------|---------|--------------|----------------------------|
-| scale-up 协议层（NVLink IP，内嵌 GPU / 整柜定价）| NVDA | ~70% | 业内估算 \$5-8B（IP 价值内嵌 GPU / 整柜售价，不单独售卖）|
-| 英伟达 Networking 业务（含 NVLink Switch System + InfiniBand + Spectrum-X 以太网）| NVDA | 业内估算 70%+ | \$31.4B（一手，FY26 全年 +142%）|
-| 以太网交换 ASIC | AVGO | ~75%（Non-GAAP）| 业内估算 \$6-8B |
-| 路由 ASIC（Jericho）| AVGO | ~75%（Non-GAAP）| 业内估算 \$2-3B |
-| 定制 XPU 设计 | AVGO | ~75%（Non-GAAP）| 业内估算 \$12-14B |
-| 整机以太网 + EOS | Arista | ~64% | 业内估算 \$5-7B（AI 相关部分）|
+| scale-up 协议层（NVLink IP，内嵌 GPU / 整柜定价）| NVDA | ~70% | \$5-8B（IP 价值内嵌 GPU / 整柜售价，不单独售卖）|
+| 英伟达 Networking 业务（含 NVLink Switch System + InfiniBand + Spectrum-X 以太网）| NVDA | 70%+ | \$31.4B（一手，FY26 全年 +142%）|
+| 以太网交换 ASIC | AVGO | ~75%（Non-GAAP）| \$6-8B |
+| 路由 ASIC（Jericho）| AVGO | ~75%（Non-GAAP）| \$2-3B |
+| 定制 XPU 设计 | AVGO | ~75%（Non-GAAP）| \$12-14B |
+| 整机以太网 + EOS | Arista | ~64% | \$5-7B（AI 相关部分）|
 | PCIe retimer / CXL | Astera Labs | ~76% | \$852.5M（全部业务）|
-| 800G / 1.6T 光模块 | 中际旭创 / 新易盛 / Coherent / Lumentum | 业内估算 30-50%（厂家分化）| 业内估算 \$15-25B（四厂合计 2025-2026）|
-| 光 DSP / TIA / Driver | 美满电子 / 博通 / 其他 | 业内估算 50-65% | 业内估算 \$3-5B |
+| 800G / 1.6T 光模块 | 中际旭创 / 新易盛 / Coherent / Lumentum | 30-50%（厂家分化）| \$15-25B（四厂合计 2025-2026）|
+| 光 DSP / TIA / Driver | 美满电子 / 博通 / 其他 | 50-65% | \$3-5B |
 
 > 来源：NVDA Networking \$31.4B 一手（FY26 Q4 财报电话会 2026-02-25）；其他各项综合本章 §8.2-8.7 的一手财务 + 业内综合估算。每一项独立有 1-2 份来源支撑，合计区间属作者推演结果。
 
@@ -830,7 +830,7 @@ AI 算力链上的标准之争截至 2026-05 处于这条路径的早中期：
 
 **一、AI 集群网络是三层架构**——scale-up（机柜内 NVLink 5 主导）、scale-out（InfiniBand vs 以太网 vs Spectrum-X 三方博弈）、front-end / storage（标准以太网）。每一层的玩家、毛利、议价位都不同，跨层来看是分蛋糕结构。
 
-**二、NVDA 在网络层的双抽税**——scale-up（NVLink IP 内嵌 GPU 定价业内估算 \$5-8B）+ Networking 业务（含 NVLink Switch + InfiniBand + Spectrum-X，FY26 一手 \$31.4B）合计 ~\$36-39B 年化营收、~\$25-28B 年化毛利，占 NVDA FY26 毛利贡献业内估算 16-18%。**这件事是第 7 章五税中 NVLink 一税的横向佐证，提供市场把 NVDA 的护城河完全归到 GPU 上，但 InfiniBand + NVLink + Spectrum-X 才是真护城河的另一半这一反共识子论点的硬数据——而且 FY26 Networking \$31.4B / +142% 的一手披露，把这条反共识从业内估算升级为 NVDA 自己披露的硬数字。**
+**二、NVDA 在网络层的双抽税**——scale-up（NVLink IP 内嵌 GPU 定价业内估算 \$5-8B）+ Networking 业务（含 NVLink Switch + InfiniBand + Spectrum-X，FY26 一手 \$31.4B）合计 ~\$36-39B 年化营收、~\$25-28B 年化毛利，占 NVDA FY26 毛利贡献16-18%。**这件事是第 7 章五税中 NVLink 一税的横向佐证，提供市场把 NVDA 的护城河完全归到 GPU 上，但 InfiniBand + NVLink + Spectrum-X 才是真护城河的另一半这一反共识子论点的硬数据——而且 FY26 Networking \$31.4B / +142% 的一手披露，把这条反共识从升级为 NVDA 自己披露的硬数字。**
 
 **三、博通是除 NVDA 外整条 AI 算力链上单一最大赢家**——FY25 总营收 \$63.89B、AI 半导体营收 \$20B（+65% YoY，一手）、Non-GAAP 毛利率 ~75%、AI 相关合同储备 \$73B（18 个月内可交付）。AVGO 在以太网交换 ASIC（~70%+ 市占）+ 定制 XPU 设计（超大规模云厂自研路径核心供应商）两条线上的位置是对冲性质——NVDA 输也好赢也好 AVGO 都在分蛋糕。
 

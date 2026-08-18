@@ -7,7 +7,7 @@ theoretical_anchor: "Solow 增长会计 / TFP 渠道分解 / Aghion-Jones-Jones 
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/LEu8wM8iMiREA4kFbbPcnMaqnep"
-last_synced: "2026-06-30T02:03:06+08:00"
+last_synced: "2026-08-18T20:58:04+08:00"
 status: finalized
 ---
 
@@ -43,11 +43,11 @@ xychart-beta
 
 5 个微观渠道按本书定义如下，对应 5 个不同的经济学机制和 5 套不同的微观证据：
 
-1. **任务自动化**——AI 替代低技能任务（客服一线、初级文案、数据录入、基础翻译、初级法律审查）。理论锚是 Acemoglu-Restrepo (2020) 任务导向自动化模型，实证锚是 Brynjolfsson-Li-Raymond (2023) NBER WP 31161 客服实验的 +14% 平均生产力提升。
-2. **信息成本下降**——AI 把获取一条专业信息的边际成本逼近零（搜索、综合、答疑、初步诊断）。理论锚是信息经济学的检索成本（Stigler 1961）+ 注意力成本（Kahneman 2011），实证锚是 ChatGPT 类工具上线后的信息搜索行为变化。
-3. **协调成本下降**——AI 降低跨语言 / 跨部门 / 跨企业的协调摩擦。理论锚是 Coase (1937) 交易成本 + Williamson (1985) 治理结构，实证锚是机器翻译质量从 BLEU 30 到 BLEU 60 的 12 年跃迁、跨国客服与远程工作的边际成本曲线。
-4. **资本增强**——AI 作为程序员 / 律师 / 医生 / 投行分析师的个人副驾，提升单位高技能劳动者的产出。理论锚是 capital-augmenting technical change（资本增强型技术进步），实证锚是 GitHub Copilot 实测程序员任务完成时间缩短 55.8%（Peng et al. 2023, arXiv 2302.06590）。
-5. **新知识产生**——AI 加速科学发现 / 药物筛选 / 材料组合 / 数学证明。理论锚是 Aghion-Jones-Jones (2019) "AI as a Research Input"，实证锚是 AlphaFold 把已预测的蛋白质结构数量从 200K（2020）推到 200M+（2022-07-28，EBI AlphaFold DB 扩展公告）。
+1. **任务自动化**——AI 替代低技能任务（客服一线、初级文案、数据录入、基础翻译、初级法律审查）。理论依据是 Acemoglu-Restrepo (2020) 任务导向自动化模型，实证锚是 Brynjolfsson-Li-Raymond (2023) NBER WP 31161 客服实验的 +14% 平均生产力提升。
+2. **信息成本下降**——AI 把获取一条专业信息的边际成本逼近零（搜索、综合、答疑、初步诊断）。理论依据是信息经济学的检索成本（Stigler 1961）+ 注意力成本（Kahneman 2011），实证锚是 ChatGPT 类工具上线后的信息搜索行为变化。
+3. **协调成本下降**——AI 降低跨语言 / 跨部门 / 跨企业的协调摩擦。理论依据是 Coase (1937) 交易成本 + Williamson (1985) 治理结构，实证锚是机器翻译质量从 BLEU 30 到 BLEU 60 的 12 年跃迁、跨国客服与远程工作的边际成本曲线。
+4. **资本增强**——AI 作为程序员 / 律师 / 医生 / 投行分析师的个人副驾，提升单位高技能劳动者的产出。理论依据是 capital-augmenting technical change（资本增强型技术进步），实证锚是 GitHub Copilot 实测程序员任务完成时间缩短 55.8%（Peng et al. 2023, arXiv 2302.06590）。
+5. **新知识产生**——AI 加速科学发现 / 药物筛选 / 材料组合 / 数学证明。理论依据是 Aghion-Jones-Jones (2019) "AI as a Research Input"，实证锚是 AlphaFold 把已预测的蛋白质结构数量从 200K（2020）推到 200M+（2022-07-28，EBI AlphaFold DB 扩展公告）。
 
 把这 5 个渠道的宏观传导路径画成一张图——5 条独立的微观渠道汇入宏观 TFP 余值这一个加总量，再通过资本深化与劳动重组两条平行路径传导到 GDP 增长率：
 
@@ -137,7 +137,7 @@ xychart-beta
 
 ## 25.2 渠道 1 任务自动化：Acemoglu-Restrepo 框架与 Brynjolfsson 客服实验
 
-任务自动化是 5 个渠道里实证最扎实的——既有理论锚（Acemoglu-Restrepo 任务导向自动化框架），又有现场实验数据（Brynjolfsson-Li-Raymond 客服实验、Noy-Zhang 写作实验、Peng et al. Copilot 实验）。但实证最扎实的渠道，也是外推到全经济时方差最大的渠道。
+任务自动化是 5 个渠道里实证最扎实的——既有理论支撑（Acemoglu-Restrepo 任务导向自动化框架），又有现场实验数据（Brynjolfsson-Li-Raymond 客服实验、Noy-Zhang 写作实验、Peng et al. Copilot 实验）。但实证最扎实的渠道，也是外推到全经济时方差最大的渠道。
 
 **Acemoglu-Restrepo 任务导向框架的核心机制**。Acemoglu 与 Restrepo 在 2018-2020 系列论文把自动化形式化为两种机制的赛跑。第一种是 displacement effect（替代效应）：新技术让原本由劳动完成的任务由资本完成，劳动需求下降。第二种是 reinstatement effect（重置效应）：新技术创造新任务（如数据科学家、机器学习工程师、AI 安全研究员），劳动需求上升。TFP 增长率取决于两条效应的代数和——如果新任务创造速度跟上替代速度，劳动需求总量不下降，但工资分配可能极化（被替代任务的工资压低、新任务的工资抬高）。
 
@@ -221,7 +221,7 @@ xychart-beta
 
 ## 25.4 渠道 4 资本增强：GitHub Copilot 与高技能白领
 
-渠道 4 是 5 个渠道里争议最小、实证最清晰的——AI 作为个人副驾，让单位高技能劳动者产出更多。理论锚是 capital-augmenting technical change（资本增强型技术进步），实证锚是 GitHub Copilot 等代码生成工具对程序员生产力的实测。
+渠道 4 是 5 个渠道里争议最小、实证最清晰的——AI 作为个人副驾，让单位高技能劳动者产出更多。理论依据是 capital-augmenting technical change（资本增强型技术进步），实证锚是 GitHub Copilot 等代码生成工具对程序员生产力的实测。
 
 **Peng et al. 2023 Copilot 实验的核心数据**。在 §25.2 已经引用过——Peng et al. 在 arXiv 2302.06590 (2023-02-13) 报告了 95 名职业程序员的对照实验。任务是写一个 JavaScript HTTP 服务器，Copilot 组平均完成时间 71 分钟、对照组 161 分钟，** Copilot 提速 55.8%、统计显著 P = 0.0017**。后续 GitHub 自己发布的 SPACE（Satisfaction, Performance, Activity, Communication, Efficiency）框架报告补充了 2000+ 程序员的自我报告数据——60-75% 报告工作满意度提升、87% 报告减少重复任务的心智消耗、73% 报告进入心流（flow state）更容易。
 
@@ -243,7 +243,7 @@ xychart-beta
 | 法律（合同审查 / 文献检索）| Choi et al. 2024 GW Law School | 12-24% | 现场实验，外推有限 |
 | 咨询 | Mollick et al. 2023 BCG 实验 | 12-25% | 单家公司试点 |
 | 医疗（放射科辅助诊断）| Eric Topol 2024 综合 | 8-15% | 监管约束限制了渗透 |
-| 投行 / 财务分析师 | 多家公司自报 | 业内估算 10-20% | 实证基础最弱 |
+| 投行 / 财务分析师 | 多家公司自报 | 10-20% | 实证基础最弱 |
 
 > 来源：法律实验见 Choi et al. "AI Assistance in Legal Analysis: An Empirical Study" George Washington Law Review 2024；咨询见 Mollick et al. HBS 24-013, 2023-09；放射科见 Topol "AI in Medicine: 2024 Update" Nature Medicine 综合；医疗与投行数据可信度较低，独立第三方实证不足，业内估算，未纳入 §25.6 加总计算。
 
@@ -253,7 +253,7 @@ xychart-beta
 
 ## 25.5 渠道 5 新知识产生：Aghion-Jones-Jones 框架与 AlphaFold
 
-渠道 5 是 5 个渠道里宏观尺度最大、但实证最难量化的——AI 加速科学发现、药物筛选、材料组合、数学证明等产生新知识的活动。理论锚是 Aghion-Jones-Jones (2019) "AI as a Research Input"，实证锚最有代表性的案例是 DeepMind AlphaFold。
+渠道 5 是 5 个渠道里宏观尺度最大、但实证最难量化的——AI 加速科学发现、药物筛选、材料组合、数学证明等产生新知识的活动。理论依据是 Aghion-Jones-Jones (2019) "AI as a Research Input"，实证锚最有代表性的案例是 DeepMind AlphaFold。
 
 **Aghion-Jones-Jones 2019 框架的核心机制**。Aghion, Jones, Jones 2019 NBER WP 23928 把 AI 作为研究输入建模。
 
@@ -291,7 +291,7 @@ Cockburn, Henderson, Stern 2018 NBER 25502 论文测算 1990-2014 年间美国 A
 
 **渠道之间的重叠**。5 个渠道不是 MECE 划分，重叠主要发生在：渠道 1（任务自动化）与渠道 4（资本增强）——客服员工被 AI 替代部分任务后，剩下的任务效率也被 AI 增强了，14% 客服实验已经包含两个机制的混合效应；渠道 1 与渠道 3（协调成本下降）——跨语言客服 AI 化同时降低了任务成本（渠道 1）和协调成本（渠道 3）；渠道 2（信息成本下降）与渠道 4——程序员用 Copilot 既减少了信息搜索成本（渠道 2）也增强了编码效率（渠道 4）。
 
-本章对重叠的处理是：5 个渠道独立估算上限后，按经验扣除 25-35% 的重叠。这个重叠扣除率本身是一个未经实证的参数，是本章的判断性输入。
+这里对重叠的处理是：五个渠道各自估算上限后，按经验扣除 25-35% 的重叠。这个重叠扣除率本身是一个未经实证的参数，是本章的判断性输入。
 
 **渗透率的时间分布**。前 5 节给的所有10 年累计 TFP 贡献数字都假设 AI 在 10 年内线性达到目标渗透率。但实际渗透曲线很可能是 S 型——前 3 年慢、中 5 年快、后 2 年放缓。如果按 S 型曲线分布，10 年累计 TFP 贡献的中位 50% 会在第 5-7 年发生。这对应2025-2027 处于 J 曲线早期 / 2027-2030 开始加速 / 2030 之后红利显化的判断。
 
@@ -330,7 +330,7 @@ xychart-beta
 
 ## 25.7 Brynjolfsson J 曲线与 2024 年 BLS 1.5% 的解释
 
-第六节给出了5 渠道加总 2.65%的中位估算，意味着本章对 2026-2035 这 10 年的累计 TFP 增量持中等乐观判断。但 2025 年底 BLS 修订后的数据告诉市场，2024 全年 TFP 1.5%（原始 2025-03 新闻稿为 1.3%，2025-12-19 修订上调 0.2pp）。如果 AI 的累计 TFP 红利真的有 2.65%，为什么 2024 年只看到 1.5%——其中又有多少是 AI 贡献的？
+第六节给出五个渠道加总 2.65% 的中位估算，意味着对 2026-2035 这十年的累计全要素生产率增量持中等乐观判断。但 2025 年底 BLS 修订后的数据告诉市场，2024 全年 TFP 1.5%（原始 2025-03 新闻稿为 1.3%，2025-12-19 修订上调 0.2pp）。如果 AI 的累计 TFP 红利真的有 2.65%，为什么 2024 年只看到 1.5%——其中又有多少是 AI 贡献的？
 
 这一节回答这个问题。框架是 Brynjolfsson-Rock-Syverson 2021 的 J 曲线论文。
 

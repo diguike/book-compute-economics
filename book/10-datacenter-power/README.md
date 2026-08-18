@@ -7,7 +7,7 @@ theoretical_anchor: "不动产资本化率 / PJM 容量市场设计"
 data_cutoff: "2026-05"
 disclaimer: none
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/G4a8wSdD2iDX7PkrQyAca9pbnIc"
-last_synced: "2026-07-08T21:31:49+08:00"
+last_synced: "2026-08-18T20:55:17+08:00"
 status: finalized
 ---
 
@@ -39,9 +39,9 @@ Dominion 当前年均接入约 15 个数据中心、合计 1GW 负荷；排队�
 
 > IDC REIT：Real Estate Investment Trust，房地产投资信托。ERCOT = Electric Reliability Council of Texas，德州电力可靠性委员会，德州独立电网运营商。
 
-本章是产业链全景部分的电力锚点章，承担三件事：
+这一章是产业链全景里的电力部分，要说清三件事：
 
-1. **议题 7（电力是不是真瓶颈）的物理基础**。本章只给是的物理证据，宏观外溢留到第 27 章，次生硬约束留到第 14 章（缓解之后的新约束）。
+1. **电力到底是不是真瓶颈，物理证据在哪里。** 这里只给「是」的物理证据，宏观外溢留到第 27 章，次生硬约束留到第 14 章（缓解之后的新约束）。
 2. **数据中心物理拆解**。把钢筋水泥和电两层分清楚——楼宇 / UPS / 液冷一层、变压器 / 容量拍卖 / 长期 PPA 另一层——告诉读者真正卡脖子的是哪一层。
 3. **三类玩家的财务锚**。IDC REIT（[Digital Realty](https://www.digitalrealty.com/) / [Equinix](https://www.equinix.com/)）、电力 IPP（Constellation / Vistra / GE Vernova）、自建派（Crusoe / [xAI](https://x.ai/) / Stargate）的毛利结构与估值切入点。
 
@@ -280,7 +280,7 @@ PPA 在 2020 年之前主要是企业为完成 RE100（100% 可再生能源承�
 | PPA | 客户 | 发电资产 | 容量 / 时长 | 公告价格 | 公告时点 |
 |---|---|---|---|---|---|
 | TMI 重启 | Microsoft | Constellation Three Mile Island Unit 1（核电，PA）| 835MW × 20 年 | ~\$110-115/MWh（Jefferies 估算）| 2024-09 |
-| Susquehanna 核电直购 | AWS | Talen Susquehanna 核电（PA）| 1,920MW × 17 年（至 2042，含选项延期）| 未披露（业内估算 \$80-100/MWh）| 2025（PPA 签订） |
+| Susquehanna 核电直购 | AWS | Talen Susquehanna 核电（PA）| 1,920MW × 17 年（至 2042，含选项延期）| 未披露（\$80-100/MWh）| 2025（PPA 签订） |
 | Clinton 核电延期 | Meta | Constellation Clinton（IL）| 1,121MW × 20 年（2027-2047）| 未披露 | 2025-06 |
 | Calpine 燃机组合 | Constellation 收购 Calpine 后服务多家超大规模云厂 | 多机组燃机 + 部分核电 | 60GW 零 / 低碳容量 | — | 2026-01-07 收购完成 |
 | Comanche Peak 核电 | 大型投资级公司（业内推测 Microsoft / Meta） | Vistra Comanche Peak（TX）| 1,200MW × 20 年（2027-Q4 起送电）| 未披露 | 2025-Q3 |
@@ -355,7 +355,7 @@ GE Vernova 2025 年 Electrification 业务（含变压器、配电设备、电�
 - **Kairos Power**：2024 年获得 Hermes Two Demonstration Plant（田纳西橡树岭，2×35MW 熔盐反应堆）的 NRC 建设许可。Google 在 2024-10 与 Kairos 签 500MW 长期合约，首堆目标 2030 年。
 - **X-Energy**：2026-04 完成 IPO 募资 \$1.02B。商用部署目标 2030-2032 年。
 
-NRC 的反应堆设计认证流程平均 4-6 年，建设许可 2-3 年，建造 4-7 年。从 2025 年提交 COLA 算起，首批商用 SMR 最早要到 2030 年才能并网，规模化（10GW+ 装机）要到 2035 年之后。**SMR 这件事对 2026-2030 的电力瓶颈完全没有缓解作用——2030 年前 SMR 商用并网容量 < 1 GW**（与第 32 章 SMR 时间表预测一致）。这是本章的硬判断，议题 8（SMR 能否在 2030 前实质落地）留给第 27 章和第 32 章。
+NRC 的反应堆设计认证流程平均 4-6 年，建设许可 2-3 年，建造 4-7 年。从 2025 年提交 COLA 算起，首批商用 SMR 最早要到 2030 年才能并网，规模化（10GW+ 装机）要到 2035 年之后。**SMR 这件事对 2026-2030 的电力瓶颈完全没有缓解作用——2030 年前 SMR 商用并网容量 < 1 GW**（与第 32 章 SMR 时间表预测一致）。这是本章的硬判断，小型核反应堆能否在 2030 年前实质落地，留给第 27 章和第 32 章。
 
 把三条物理时间线叠起来看 2026 年立项的 100MW+ AI 数据中心的真实工期：
 
@@ -386,10 +386,10 @@ NRC 的反应堆设计认证流程平均 4-6 年，建设许可 2-3 年，建造
 
 | 指标 | Digital Realty | Equinix |
 |---|---|---|
-| FY2025 总营收（business estimate） | ~\$5.8B（业内估算） | ~\$9.2B（业内估算）|
+| FY2025 总营收（business estimate） | ~\$5.8B | ~\$9.2B|
 | Core FFO / share FY2025 | \$7.39（同比 +10.1%，公司披露） | n/a（EQIX 主披露 AFFO 总额）|
 | AFFO 总额 FY2025 | n/a（DLR 主披露 FFO/share） | \$3.731-3.811B（公司指引区间）|
-| AFFO YoY 增速 | ~14%（业内估算）| 12%（公司指引）|
+| AFFO YoY 增速 | ~14%| 12%（公司指引）|
 | Q4 2025 单季 bookings | \$400M annualized GAAP 租金（公司披露）| 持续增长（公司未披露季度数）|
 | FY2025 年末在手订单 | \$817M annualized rental（公司披露）| n/a（EQIX 未单独披露合同储备金额）|
 | 在建 major projects | 56 个（含 12 个 xScale）| 12 个 xScale 项目（hyperscale 子品牌）|
@@ -406,7 +406,7 @@ NRC 的反应堆设计认证流程平均 4-6 年，建设许可 2-3 年，建造
 
 **第三个不寻常：renewal pricing 大幅高于 historical**。Digital Realty 2025-Q4 续约租金 cash basis +6.1%，这是 IDC REIT 行业过去 10 年最高水平之一——意味着租户在续约时愿意接受 6.1% 的 cash 现金价格上调，无法外迁，因为外迁也找不到电。Equinix interconnection 业务（不是 colocation 主业，是企业 / 云之间的连接服务）YoY +10%，反映企业在 AI 训练 / 推理之间的网络流量结构性变化。
 
-**估值含义**：Digital Realty 与 Equinix 在 2024-2026 年的市值表现远好于普通商业地产 REIT，但仍跑输给超大规模云厂与 IPP。原因在于 REIT 的杠杆——IDC REIT 不能像超大规模云厂一样把租户的电力风险完全转嫁出去（REIT 通常负责 wholesale 电力采购），也不能像 IPP 一样直接拥有发电资产、享受电力涨价。IDC REIT 在 AI 周期里的位置是两边夹中间——上游电力涨价吃掉一部分利润，下游租户租金涨价补回一部分，**净结果是 cash AFFO 增长 12-14% 而不是 30-40%**。这跟英伟达 / Constellation / Vistra 的盈利曲线相比明显逊色——本章对应反共识 #1（REIT 模式在 AI 周期里位置尴尬）的物理证据。
+**估值含义**：Digital Realty 与 Equinix 在 2024-2026 年的市值表现远好于普通商业地产 REIT，但仍跑输给超大规模云厂与 IPP。原因在于 REIT 的杠杆——IDC REIT 不能像超大规模云厂一样把租户的电力风险完全转嫁出去（REIT 通常负责 wholesale 电力采购），也不能像 IPP 一样直接拥有发电资产、享受电力涨价。IDC REIT 在 AI 周期里的位置是两边夹中间——上游电力涨价吃掉一部分利润，下游租户租金涨价补回一部分，**净结果是 cash AFFO 增长 12-14% 而不是 30-40%**。这跟英伟达 / Constellation / Vistra 的盈利曲线相比明显逊色——本章对应周期定位的核心判断（REIT 模式在 AI 周期里位置尴尬）的物理证据。
 
 第 30 章会把 IDC REIT 的估值模板单独展开，包括跟历史 REIT 行业基准的对照、跟 Vistra / Constellation 的 EV/EBITDA 倍数对比、以及储备电力期权应如何计入 NAV（Net Asset Value，净资产价值）。本章的任务是把 REIT 不是 IDC 这一轮真正的赢家这件事用财务数字钉住。
 
@@ -426,7 +426,7 @@ Crusoe Abilene 项目是 2024-2026 算力地理迁移里最具典型性的案例
 |---|---|---|
 | 单 MW 建设成本 | \$9-12M（含燃机 + 电气） | \$11-14M（不含电力主网建设）|
 | 电力来源 | 自建燃机 + ERCOT | Dominion 电网（PJM 容量市场）|
-| 单 MWh 电费 | 业内估算 \$60-80（天然气价格敏感）| 业内估算 \$90-110（含容量市场费用）|
+| 单 MWh 电费 | \$60-80（天然气价格敏感）| \$90-110（含容量市场费用）|
 | 排队周期 | 12-18 月（behind-the-meter 加速）| 4-7 年 |
 | PUE 目标 | 1.2-1.3（液冷 + 干旱气候）| 1.3-1.5（PJM 地区气候 + 老旧设施 mix）|
 | 客户结构 | 单租户 / 少租户大单（Oracle / Microsoft）| 多租户混合 |
@@ -477,7 +477,7 @@ xychart-beta
 
 > 来源：本节为本书基于前文小节中的 IPP / 超大规模云厂 / IDC REIT 财务数字综合的横向对照分析。
 
-这张表的含义是：**IDC REIT 在 AI 周期里赚到了，但赚得最少**。原因是 IDC REIT 处在夹在中间的位置——既不拥有发电资产（不能享受 PPA 涨价），又不是终端算力消费者（不能用算力商业化收回成本）。这是反共识 #1 的物理证据。Digital Realty 与 Equinix 在 2026-2028 年的盈利曲线可能继续增长，但增速结构性低于 IPP 与超大规模云厂。第 30 章估值模板对 IDC REIT 的处理会反映这一点。
+这张表的含义是：**IDC REIT 在 AI 周期里赚到了，但赚得最少**。原因是 IDC REIT 处在夹在中间的位置——既不拥有发电资产（不能享受 PPA 涨价），又不是终端算力消费者（不能用算力商业化收回成本）。这是周期定位的核心判断 的物理证据。Digital Realty 与 Equinix 在 2026-2028 年的盈利曲线可能继续增长，但增速结构性低于 IPP 与超大规模云厂。第 30 章估值模板对 IDC REIT 的处理会反映这一点。
 
 **第四，算力地理被电网重画是 2026-2030 最大的物理位移**。北弗吉尼亚份额从增长变成横盘、德州 / 凤凰城 / 哥伦布成为增长极、硅谷被结构性挤出、Abilene 这种小城跻身全球前 10 大集群、核电厂旁边的小镇（Susquehanna 旁边的 Salem Township、Pennsylvania）变成超大规模云厂必争之地——这一系列地理迁移在 2026-2030 年的规模与速度，是过去 30 年互联网产业地理迁移最大的一次。
 

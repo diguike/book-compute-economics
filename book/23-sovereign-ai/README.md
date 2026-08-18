@@ -7,7 +7,7 @@ theoretical_anchor: "主权基金产业政策 / Acemoglu-Robinson 制度与技�
 data_cutoff: "2026-05"
 disclaimer: chapter
 primary_data_sources:
-  - "NVDA 法说会 sovereign AI 披露（FY25 / FY26 季报与电话会）"
+  - "NVDA 财报电话会 sovereign AI 披露（FY25 / FY26 季报与电话会）"
   - "G42（阿联酋）公开公告 + Microsoft 战略合作披露"
   - "HUMAIN（沙特）/ PIF 公开公告"
   - "马来西亚 / 印尼 / 越南数据中心招标 + 政府公告"
@@ -15,7 +15,7 @@ primary_data_sources:
   - "Mistral / ARM 上市文件（含主权 AI 相关条款）"
   - "IEA 中东 / 南亚电力报告"
 feishu_url: "https://fivwvysqdz.feishu.cn/wiki/SaV2wHBJ2iWAd2khYaMcoBrvnPQ"
-last_synced: "2026-06-30T02:03:00+08:00"
+last_synced: "2026-08-18T20:57:40+08:00"
 status: finalized
 ---
 
@@ -69,7 +69,7 @@ graph TD
     style SA fill:#FF9933,color:#000
 ```
 
-本章是 disclaimer 章。涉及 G42 / HUMAIN / Nebius / Mistral 等具体公司讨论，全部按评论而非建议措辞处理，章末有完整免责声明。本章作者持仓部分按全书统一约定——不公开披露具体头寸细节。
+这一章涉及 G42、HUMAIN、Nebius、Mistral 等具体公司，全部只做分析、不作建议地措辞处理，章末有完整免责声明。本章作者持仓部分按全书统一约定——不公开披露具体头寸细节。
 
 ## 23.2 主权 AI 资本是什么——一个工作定义
 
@@ -118,7 +118,7 @@ NVDA 自 2024 年起在电话会中频繁提及 sovereign AI 作为高增长板�
 
 下表给出 FY25 → FY27e 三年的 sovereign AI 营收占比与绝对额估算：
 
-| 财年 | NVDA 数据中心营收 | sovereign AI 占比（业内估算） | sovereign AI 绝对额 | 主要驱动 |
+| 财年 | NVDA 数据中心营收 | sovereign AI 占比 | sovereign AI 绝对额 | 主要驱动 |
 |------|-----------------|----------------------------|-------------------|---------|
 | FY25 | \$115.2B（实际） | 3-5% | \$3-6B | 早期 G42 / 沙特零星订单 |
 | FY26 | \$193.7B（实际） | 7-10% | \$14-19B | G42 / HUMAIN / IndiaAI / 欧洲首轮 |
@@ -282,7 +282,7 @@ Tata 集团旗下的 Tata Communications + Tata Consultancy Services（TCS）也
 
 把 Reliance 与 Tata 的私营建设规模与 IndiaAI Mission 的政府投入做对比：
 
-| 玩家 | 性质 | 资本来源 | 算力规模规划（业内估算） | 时点 |
+| 玩家 | 性质 | 资本来源 | 算力规模规划 | 时点 |
 |------|------|---------|----------------------|------|
 | IndiaAI Mission | 政府 | 联邦预算 ~\$1.25B | 10000+ GPU 公共池 | 2024-2029 |
 | Reliance Jio | 私营 | Reliance Industries 自有资本支出 | GW 量级，万卡量级 | 2024-2027 |
@@ -387,7 +387,7 @@ graph TD
 
 下表按资本来源 + 算力规模 + 战略客户 + 地缘定位四维度排列：
 
-| 玩家 | 国家 | 资本来源 | 已部署 / 已公告算力（业内估算） | 战略客户 | 地缘定位 |
+| 玩家 | 国家 | 资本来源 | 已部署 / 已公告算力 | 战略客户 | 地缘定位 |
 |------|------|---------|----------------------------|---------|---------|
 | G42 | 阿联酋 | Mubadala + Tahnoon + Microsoft \$1.5B | 5GW 量级（Stargate UAE）+ 既有 ~万卡 | OpenAI / Oracle / 阿联酋政府 + 中东客户 | 美方紧盟约束下的中东中枢 |
 | HUMAIN | 沙特 | PIF 100% | 起步 18000 颗 + GW 量级扩产 | 沙特政府 + 英伟达 / AMD / 高通联盟 | PIF 直接控股的国家算力公司 |
@@ -404,7 +404,7 @@ graph TD
 
 这张表显示了第三阵营的内部异质性——并不存在统一的 sovereign AI 阵营。中东双子（G42 / HUMAIN）是真正的主权资本直营，欧洲（Mistral / Aleph Alpha）有强主权属性但规模有限，印度三家（Reliance / Tata / Yotta）是私营巨头主导，Nebius / Cohere 是市场化算力供应方，字节海外算力是中国互联网公司的海外延伸。
 
-把这张表与中美双极对照——美国超大规模云厂五家 2026 AI 资本支出合计 \$680-700B、中国云三家（阿里云 + 腾讯云 + 华为云）合计 AI 资本支出业内估算 \$30-50B（详第 21 章）、第三阵营全部加起来业内估算 \$50-80B（FY26 当年）。
+把这张表与中美双极对照——美国超大规模云厂五家 2026 AI 资本支出合计 \$680-700B、中国云三家（阿里云 + 腾讯云 + 华为云）合计 AI 资本支出业内估算 \$30-50B（详第 21 章）、第三阵营全部加起来\$50-80B（FY26 当年）。
 
 ```mermaid
 xychart-beta
